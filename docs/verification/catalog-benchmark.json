@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-11-01T17:00:01.880316+00:00",
+  "scope": "Synthetic service benchmark in a disposable database; never a production load certificate.",
+  "databaseVendor": "sqlite",
+  "excluded": [
+    "PostgreSQL",
+    "HTTP",
+    "TLS",
+    "authentication",
+    "AV",
+    "file bytes",
+    "VPN",
+    "company hardware"
+  ],
+  "dataset": {
+    "employees": 150,
+    "documents": 40,
+    "news": 20,
+    "charactersPerDocument": 528018
+  },
+  "phases": [
+    {
+      "concurrency": 1,
+      "requests": 100,
+      "errors": [],
+      "seconds": 1.395,
+      "operationsPerSecond": 71.71,
+      "results": {
+        "employeeSearch": {
+          "samples": 25,
+          "medianMs": 3.2,
+          "p95Ms": 5.11,
+          "maxMs": 7.39
+        },
+        "documentTitleSearch": {
+          "samples": 25,
+          "medianMs": 7.42,
+          "p95Ms": 13.55,
+          "maxMs": 14.55
+        },
+        "documentContentSearch": {
+          "samples": 25,
+          "medianMs": 31.34,
+          "p95Ms": 53.0,
+          "maxMs": 59.35
+        },
+        "newsPage": {
+          "samples": 25,
+          "medianMs": 3.27,
+          "p95Ms": 4.3,
+          "maxMs": 6.11
+        }
+      }
+    },
+    {
+      "concurrency": 8,
+      "requests": 100,
+      "errors": [],
+      "seconds": 0.856,
+      "operationsPerSecond": 116.76,
+      "results": {
+        "employeeSearch": {
+          "samples": 25,
+          "medianMs": 37.0,
+          "p95Ms": 80.35,
+          "maxMs": 82.59
+        },
+        "documentTitleSearch": {
+          "samples": 25,
+          "medianMs": 43.34,
+          "p95Ms": 71.35,
+          "maxMs": 84.44
+        },
+        "documentContentSearch": {
+          "samples": 25,
+          "medianMs": 48.19,
+          "p95Ms": 66.75,
+          "maxMs": 99.47
+        },
+        "newsPage": {
+          "samples": 25,
+          "medianMs": 44.51,
+          "p95Ms": 89.43,
+          "maxMs": 119.92
+        }
+      }
+    }
+  ]
+}

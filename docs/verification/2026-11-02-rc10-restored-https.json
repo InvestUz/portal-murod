@@ -1,0 +1,12 @@
+{
+  "oldSessionRejected": true,
+  "passwordAndMfaPreserved": true,
+  "historicalVersionAndOriginalBytes": true,
+  "passed": true,
+  "businessInventoryMatched": true,
+  "privateFilesVerified": true,
+  "independentDbAndFileVolumes": true,
+  "httpsCertificateVerified": true,
+  "scope": "Independent containers and volumes on one host; not a second physical server or full portalctl installation",
+  "productionApproved": false
+}

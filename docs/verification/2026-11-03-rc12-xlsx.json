@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Actual production-mode rc12 HTTPS/ClamAV/XLSX parser/preview/commit; no AV or parser bypass",
+  "uneditedTemplateApprovedByAv": true,
+  "sampleRowsBlockedFromCommit": true,
+  "editedTemplateApprovedAndParsed": true,
+  "createdEmployees": 1,
+  "productionApproved": false
+}

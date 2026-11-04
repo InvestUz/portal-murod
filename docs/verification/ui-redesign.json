@@ -1,0 +1,30 @@
+{
+  "release": "0.3.0-rc.2",
+  "date": "2026-11-01",
+  "frontendChecks": [
+    "TypeScript passed",
+    "ESLint passed",
+    "Vite production build passed",
+    "PostCSS parsed",
+    "No CSS font-size below 12px"
+  ],
+  "browserScope": "Actual React components in a separate synthetic-data showcase; no backend/auth end-to-end testing",
+  "inspectedViewports": [
+    1363,
+    1024,
+    390,
+    320
+  ],
+  "measuredNoHorizontalOverflow": [
+    320,
+    1024
+  ],
+  "interactions": [
+    "React mobile navigation expands",
+    "Route transition to HR closes mobile menu",
+    "Picker rejects unmatched typed text",
+    "Picker accepts selected list item and test form submits"
+  ],
+  "backendTests": "160 passing tests retained from 0.3.0-rc.1, not rerun for this frontend-only change",
+  "productionApproved": false
+}

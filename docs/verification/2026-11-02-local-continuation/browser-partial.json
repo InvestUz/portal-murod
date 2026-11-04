@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-01T19:44:29.558033+00:00",
+  "status": "partial",
+  "backend": "Actual Django/Gunicorn + PostgreSQL 17 + pinned Nginx, HTTP at 127.0.0.1:18445",
+  "data": "Synthetic disposable fixtures; already-provisioned accounts/MFA, not first-login acceptance",
+  "passed": [
+    "Password and actual TOTP login for EMPLOYEE, HR and ADMIN",
+    "Russian/Uzbek UI navigation",
+    "Employee search excludes hidden mobile; empty state",
+    "Employee own floor/room changes persist after page reload",
+    "HR creates employee with portal-generated number TI-000005",
+    "HR edits employee; values persist after reload",
+    "ADMIN account list renders",
+    "Unique news open stays at 1 after reload",
+    "Soft-delete news, inspect trash, restore and observe news list",
+    "Employee card at 320px: clientWidth=scrollWidth=305; desktop 1366x900",
+    "No warning/error entries in captured browser console"
+  ],
+  "notRun": [
+    "First password change/MFA enrollment through browser",
+    "Full keyboard/accessibility audit",
+    "Browser import/photo/document versions/approved download",
+    "Fresh antivirus/OCR pipeline",
+    "HTTPS proxy/VPN/company infrastructure",
+    "Load/fault tests"
+  ],
+  "screenshots": [
+    "browser-profile.png",
+    "browser-hr-created.png",
+    "browser-mobile-320.png",
+    "browser-news-restored.png"
+  ],
+  "labRetainedForUser": true
+}

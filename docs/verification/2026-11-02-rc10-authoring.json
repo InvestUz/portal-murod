@@ -1,0 +1,46 @@
+{
+  "format": 1,
+  "release": "0.3.0-rc.10",
+  "date": "2026-11-02",
+  "sourceBaseCommit": "e01d9093d32f699d89c054208813c0d79ca57818",
+  "status": "AUTHORED_NOT_EXECUTED",
+  "reason": "User explicitly requested code only; tests and other execution will be authorized later.",
+  "authored": [
+    "Prepared PostgreSQL target replacing gosu with su-exec",
+    "Hash-pinned npm and undici downloader and frontend-tools target",
+    "Compose/installer/acceptance wiring for prepared platform images",
+    "Prepared image inventory and strict scan stage; original base/final gates retained",
+    "Frontend build provenance and optional source-plus-static-artifact packaging",
+    "Current IT handover, deferred browser matrix and final verification instructions"
+  ],
+  "currentChecks": {
+    "pytest": "NOT RUN",
+    "ruff": "NOT RUN",
+    "bandit": "NOT RUN",
+    "django": "NOT RUN",
+    "migrationDrift": "NOT RUN",
+    "openapi": "NOT RUN",
+    "apiTypes": "NOT RUN",
+    "frontendTypecheck": "NOT RUN",
+    "frontendLint": "NOT RUN",
+    "componentTests": "NOT RUN",
+    "frontendBuild": "NOT RUN",
+    "containerBuilds": "NOT RUN",
+    "imageScans": "NOT RUN",
+    "livePipeline": "NOT RUN",
+    "backupRestore": "NOT RUN",
+    "browserAcceptance": "NOT RUN",
+    "releasePackaging": "NOT RUN"
+  },
+  "previousEvidence": "Historical reports under docs/verification describe their own source and scope. No previous PASS transferred to rc.10.",
+  "knownBlockers": [
+    "Unmodified upstream PostgreSQL and Node base findings still block strict base scan until confirmed remediation or upstream resolution",
+    "Prepared PostgreSQL/helper and npm/undici compatibility not verified",
+    "Full final browser/server acceptance and source-plus-frontend archive not executed"
+  ],
+  "technicalChecksPassed": false,
+  "productionApproved": false,
+  "dockerStarted": false,
+  "deployed": false,
+  "uploadedRemotely": false
+}

@@ -1,0 +1,11 @@
+{
+  "format": 1,
+  "tesseract": {
+    "version": "5.5.4",
+    "commit": "7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+    "url": "https://codeload.github.com/tesseract-ocr/tesseract/tar.gz/7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+    "sha256": "445603ab1d0a63df552e193a600d9d5c4021aff36e144f3091af149e5efb381a",
+    "release": "https://github.com/tesseract-ocr/tesseract/releases/tag/5.5.4",
+    "advisoryExample": "https://github.com/tesseract-ocr/tesseract/security/advisories/GHSA-5j2p-r5vc-q7f3"
+  }
+}

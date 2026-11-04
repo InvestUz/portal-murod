@@ -1,0 +1,117 @@
+{
+  "databaseVendor": "postgresql",
+  "tests": {
+    "passed": true,
+    "tests": 218,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "benchmark": {
+    "passed": true,
+    "result": {
+      "generatedAt": "2026-11-01T17:52:52.977363+00:00",
+      "scope": "Synthetic service benchmark in a disposable database; never a production load certificate.",
+      "databaseVendor": "postgresql",
+      "excluded": [
+        "HTTP",
+        "TLS",
+        "authentication",
+        "AV",
+        "file bytes",
+        "VPN",
+        "company hardware"
+      ],
+      "dataset": {
+        "employees": 150,
+        "documents": 40,
+        "news": 20,
+        "charactersPerDocument": 528018
+      },
+      "phases": [
+        {
+          "concurrency": 1,
+          "requests": 100,
+          "errors": [],
+          "seconds": 2.842,
+          "operationsPerSecond": 35.19,
+          "results": {
+            "employeeSearch": {
+              "samples": 25,
+              "medianMs": 7.16,
+              "p95Ms": 8.22,
+              "maxMs": 9.46
+            },
+            "documentTitleSearch": {
+              "samples": 25,
+              "medianMs": 5.48,
+              "p95Ms": 6.49,
+              "maxMs": 7.16
+            },
+            "documentContentSearch": {
+              "samples": 25,
+              "medianMs": 58.61,
+              "p95Ms": 62.52,
+              "maxMs": 63.7
+            },
+            "newsPage": {
+              "samples": 25,
+              "medianMs": 6.59,
+              "p95Ms": 7.25,
+              "maxMs": 7.31
+            }
+          }
+        },
+        {
+          "concurrency": 8,
+          "requests": 100,
+          "errors": [],
+          "seconds": 2.353,
+          "operationsPerSecond": 42.5,
+          "results": {
+            "employeeSearch": {
+              "samples": 25,
+              "medianMs": 30.72,
+              "p95Ms": 97.25,
+              "maxMs": 98.78
+            },
+            "documentTitleSearch": {
+              "samples": 25,
+              "medianMs": 10.68,
+              "p95Ms": 88.16,
+              "maxMs": 88.86
+            },
+            "documentContentSearch": {
+              "samples": 25,
+              "medianMs": 294.53,
+              "p95Ms": 393.74,
+              "maxMs": 397.84
+            },
+            "newsPage": {
+              "samples": 25,
+              "medianMs": 69.23,
+              "p95Ms": 93.81,
+              "maxMs": 104.86
+            }
+          }
+        }
+      ],
+      "contentQueryPlan": [
+        {
+          "Plan": {
+            "Node Type": "Seq Scan",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Relation Name": "portal_documentversion",
+            "Alias": "portal_documentversion",
+            "Startup Cost": 0.0,
+            "Total Cost": 10.88,
+            "Plan Rows": 1,
+            "Plan Width": 1090,
+            "Filter": "(normalized_text ~~ '%unique-needle-039%'::text)"
+          }
+        }
+      ]
+    }
+  }
+}

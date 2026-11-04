@@ -1,0 +1,35 @@
+{
+  "format": 1,
+  "checkedAt": "2026-11-01T17:44:47.233844+00:00",
+  "runId": "c258689c0d02a5ee04539b32",
+  "technicalChecksPassed": false,
+  "productionApproved": false,
+  "stages": [
+    {
+      "name": "host",
+      "status": "blocked"
+    }
+  ],
+  "results": {},
+  "externalGates": {
+    "browserE2E": "NOT_VERIFIED",
+    "independentPentest": "NOT_PERFORMED",
+    "companyVpnDnsTls": "NOT_VERIFIED",
+    "secondPhysicalHostRecovery": "NOT_VERIFIED",
+    "faultAndHttpLoad": "NOT_VERIFIED",
+    "realCompanyOcrCorpus": "NOT_ACCEPTED"
+  },
+  "hostBlockers": [
+    "A Linux x86_64 host is required",
+    "openssl is unavailable"
+  ],
+  "notExecuted": [
+    "base-image-scan",
+    "final-image-scan",
+    "https-business-workflows",
+    "independent-volume-restoration",
+    "installation-and-live-av-ocr",
+    "native-postgres-tests-and-benchmark",
+    "prepare-isolated-labs"
+  ]
+}

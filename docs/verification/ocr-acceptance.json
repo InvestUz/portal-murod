@@ -1,0 +1,674 @@
+{
+  "percentileMethod": "nearest-rank",
+  "summaryByScript": {
+    "uz-current": {
+      "characterErrorRate": 0.0,
+      "queryRecall": 1.0
+    },
+    "uz-reformed": {
+      "characterErrorRate": 0.005555555555555556,
+      "queryRecall": 1.0
+    },
+    "uz-cyrillic": {
+      "characterErrorRate": 0.0,
+      "queryRecall": 1.0
+    },
+    "ru": {
+      "characterErrorRate": 0.036458333333333336,
+      "queryRecall": 1.0
+    },
+    "en": {
+      "characterErrorRate": 0.0,
+      "queryRecall": 1.0
+    },
+    "mixed": {
+      "characterErrorRate": 0.0,
+      "queryRecall": 1.0
+    }
+  },
+  "generatedAt": "2026-11-01T15:00:41.981252+00:00",
+  "scope": "Synthetic raster PDF regression benchmark of the real isolated extraction worker.\n\nThis starts at EXTRACT, after AV approval. It does not certify the AV/upload chain\nor real company scans. Thresholds are engineering targets, not owner acceptance.\n",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "engineeringTargets": {
+    "characterErrorRateMax": 0.02,
+    "queryRecallMin": 0.95
+  },
+  "passed": true,
+  "summary": {
+    "cases": 24,
+    "errors": 0,
+    "weightedCharacterErrorRate": 0.006269592476489028,
+    "weightedWordErrorRate": 0.023255813953488372,
+    "queryRecall": 1.0,
+    "medianSeconds": 2.9764999999999997,
+    "p95Seconds": 3.336,
+    "maxSeconds": 3.477
+  },
+  "results": [
+    {
+      "case": "uz-current",
+      "font": "DejaVuSans",
+      "degradation": "clean",
+      "error": null,
+      "expected": "O‘ZBEKISTON RESPUBLIKASI\nG‘ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "observed": "OʻZBEKISTON RESPUBLIKASI\nG'ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "characterEdits": 0,
+      "referenceCharacters": 62,
+      "wordEdits": 0,
+      "referenceWords": 8,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 2.977,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 93.9,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-current",
+      "font": "DejaVuSans",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "O‘ZBEKISTON RESPUBLIKASI\nG‘ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "observed": "OʻZBEKISTON RESPUBLIKASI\nG'ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "characterEdits": 0,
+      "referenceCharacters": 62,
+      "wordEdits": 0,
+      "referenceWords": 8,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 3.276,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 91.63,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-current",
+      "font": "DejaVuSerif",
+      "degradation": "clean",
+      "error": null,
+      "expected": "O‘ZBEKISTON RESPUBLIKASI\nG‘ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "observed": "OʻZBEKISTON RESPUBLIKASI\nG'ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "characterEdits": 0,
+      "referenceCharacters": 62,
+      "wordEdits": 0,
+      "referenceWords": 8,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 3.477,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 83.42,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-current",
+      "font": "DejaVuSerif",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "O‘ZBEKISTON RESPUBLIKASI\nG‘ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "observed": "OʻZBEKISTON RESPUBLIKASI\nG'ALABA VA SHAHAR\nCHORAK HISOBOTI 150",
+      "characterEdits": 0,
+      "referenceCharacters": 62,
+      "wordEdits": 0,
+      "referenceWords": 8,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 3.225,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 91.9,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-reformed",
+      "font": "DejaVuSans",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ÖZBEKÇA HUJJAT\nĞALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "observed": "ÖZBEKÇA HUJJAT\nGALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "characterEdits": 1,
+      "referenceCharacters": 45,
+      "wordEdits": 1,
+      "referenceWords": 7,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 3.024,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 88.58,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-reformed",
+      "font": "DejaVuSans",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ÖZBEKÇA HUJJAT\nĞALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "observed": "ÖZBEKÇA HUJJAT\nĞALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "characterEdits": 0,
+      "referenceCharacters": 45,
+      "wordEdits": 0,
+      "referenceWords": 7,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 2.874,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 92.95,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-reformed",
+      "font": "DejaVuSerif",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ÖZBEKÇA HUJJAT\nĞALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "observed": "ÖZBEKÇA HUJJAT\nĞALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "characterEdits": 0,
+      "referenceCharacters": 45,
+      "wordEdits": 0,
+      "referenceWords": 7,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 2.925,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 91.09,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-reformed",
+      "font": "DejaVuSerif",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ÖZBEKÇA HUJJAT\nĞALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "observed": "ÖZBEKÇA HUJJAT\nĞALABA VA ŞAHAR\nÇORAK HISOBOTI",
+      "characterEdits": 0,
+      "referenceCharacters": 45,
+      "wordEdits": 0,
+      "referenceWords": 7,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 2.974,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 87.53,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-cyrillic",
+      "font": "DejaVuSans",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "characterEdits": 0,
+      "referenceCharacters": 45,
+      "wordEdits": 0,
+      "referenceWords": 6,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 2.776,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 95.88,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-cyrillic",
+      "font": "DejaVuSans",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "characterEdits": 0,
+      "referenceCharacters": 45,
+      "wordEdits": 0,
+      "referenceWords": 6,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 2.975,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 95.63,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-cyrillic",
+      "font": "DejaVuSerif",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "characterEdits": 0,
+      "referenceCharacters": 45,
+      "wordEdits": 0,
+      "referenceWords": 6,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 2.975,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 95.69,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "uz-cyrillic",
+      "font": "DejaVuSerif",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nҚЎШИМЧА ҒАЛАБА\nХОДИМЛАР БЎЛИМИ",
+      "characterEdits": 0,
+      "referenceCharacters": 45,
+      "wordEdits": 0,
+      "referenceWords": 6,
+      "queryHits": 3,
+      "queryCount": 3,
+      "seconds": 2.876,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 95.69,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "ru",
+      "font": "DejaVuSans",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ПРИКАЗ КОМПАНИИ\nУПРАВЛЕНИЕ ДОКУМЕНТАМИ\nНОМЕР 150",
+      "observed": "ПРИКАЗ КОМПАНИИ\nУПРАВЛЕНИЕ ДОКУМЕНТАМИ\nHOMEP 150",
+      "characterEdits": 5,
+      "referenceCharacters": 48,
+      "wordEdits": 1,
+      "referenceWords": 6,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 2.976,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 84.73,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "ru",
+      "font": "DejaVuSans",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ПРИКАЗ КОМПАНИИ\nУПРАВЛЕНИЕ ДОКУМЕНТАМИ\nНОМЕР 150",
+      "observed": "ПРИКАЗ КОМПАНИЙ\nУПРАВЛЕНИЕ ДОКУМЕНТАМИ\nНОМЕР 150",
+      "characterEdits": 1,
+      "referenceCharacters": 48,
+      "wordEdits": 1,
+      "referenceWords": 6,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 2.926,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 79.65,
+        "lowConfidenceLines": 1,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "ru",
+      "font": "DejaVuSerif",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ПРИКАЗ КОМПАНИИ\nУПРАВЛЕНИЕ ДОКУМЕНТАМИ\nНОМЕР 150",
+      "observed": "ПРИКАЗ КОМПАНИИ\nУШПРАВЛЕНИЕ ДОКУМЕНТАМИ\nНОМЕР 150",
+      "characterEdits": 1,
+      "referenceCharacters": 48,
+      "wordEdits": 1,
+      "referenceWords": 6,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 3.077,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 81.71,
+        "lowConfidenceLines": 1,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "ru",
+      "font": "DejaVuSerif",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ПРИКАЗ КОМПАНИИ\nУПРАВЛЕНИЕ ДОКУМЕНТАМИ\nНОМЕР 150",
+      "observed": "ПРИКАЗ КОМПАНИИ\nУПРАВЛЕНИЕ ДОКУМЕНТАМИ\nНОМЕР 150",
+      "characterEdits": 0,
+      "referenceCharacters": 48,
+      "wordEdits": 0,
+      "referenceWords": 6,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 2.874,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 92.54,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "en",
+      "font": "DejaVuSans",
+      "degradation": "clean",
+      "error": null,
+      "expected": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "observed": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "characterEdits": 0,
+      "referenceCharacters": 55,
+      "wordEdits": 0,
+      "referenceWords": 7,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 2.925,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 96.22,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "en",
+      "font": "DejaVuSans",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "observed": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "characterEdits": 0,
+      "referenceCharacters": 55,
+      "wordEdits": 0,
+      "referenceWords": 7,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 3.026,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 96.17,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "en",
+      "font": "DejaVuSerif",
+      "degradation": "clean",
+      "error": null,
+      "expected": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "observed": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "characterEdits": 0,
+      "referenceCharacters": 55,
+      "wordEdits": 0,
+      "referenceWords": 7,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 2.974,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 96.02,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "en",
+      "font": "DejaVuSerif",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "observed": "COMPANY POLICY\nEMPLOYEE INFORMATION\nDOCUMENT NUMBER 150",
+      "characterEdits": 0,
+      "referenceCharacters": 55,
+      "wordEdits": 0,
+      "referenceWords": 7,
+      "queryHits": 2,
+      "queryCount": 2,
+      "seconds": 3.024,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 95.91,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "mixed",
+      "font": "DejaVuSans",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "characterEdits": 0,
+      "referenceCharacters": 64,
+      "wordEdits": 0,
+      "referenceWords": 9,
+      "queryHits": 4,
+      "queryCount": 4,
+      "seconds": 3.336,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 94.48,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "mixed",
+      "font": "DejaVuSans",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "characterEdits": 0,
+      "referenceCharacters": 64,
+      "wordEdits": 0,
+      "referenceWords": 9,
+      "queryHits": 4,
+      "queryCount": 4,
+      "seconds": 3.175,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 88.75,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "mixed",
+      "font": "DejaVuSerif",
+      "degradation": "clean",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "characterEdits": 0,
+      "referenceCharacters": 64,
+      "wordEdits": 0,
+      "referenceWords": 9,
+      "queryHits": 4,
+      "queryCount": 4,
+      "seconds": 3.225,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 94.38,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    },
+    {
+      "case": "mixed",
+      "font": "DejaVuSerif",
+      "degradation": "jpeg-tilt",
+      "error": null,
+      "expected": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "observed": "ЎЗБЕКЧА ҲУЖЖАТ\nÖZBEKÇA HUJJAT\nПРИКАЗ КОМПАНИИ\nCOMPANY POLICY 150",
+      "characterEdits": 0,
+      "referenceCharacters": 64,
+      "wordEdits": 0,
+      "referenceWords": 9,
+      "queryHits": 4,
+      "queryCount": 4,
+      "seconds": 3.231,
+      "quality": {
+        "engine": "tesseract-script-ensemble",
+        "ocrPages": 1,
+        "meanConfidence": 94.08,
+        "lowConfidenceLines": 0,
+        "profiles": [
+          "Latin+uzb_cyrl+rus+eng+tur",
+          "Latin",
+          "uzb_cyrl"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "release": "0.3.0-rc.11",
+  "checkedAt": "2026-11-03T10:47:39.815461+00:00",
+  "checks": {
+    "database": true,
+    "frontend": true,
+    "antivirus": true,
+    "storage": true,
+    "worker": true,
+    "processorSandbox": true,
+    "ocrModels": true,
+    "postgresql": true,
+    "migrations": true,
+    "activeAdministrator": true,
+    "leastPrivilege": true,
+    "pipeline": true,
+    "fileIntegrity": true
+  },
+  "scope": "Technical acceptance; independent pentest and host/VPN acceptance are separate.",
+  "pipeline": {
+    "cleanFileApproved": true,
+    "scannedPdfIndexed": true,
+    "testSignatureBlocked": true,
+    "publishedScanSearchableInEachScript": true,
+    "originalFileIntegrity": true,
+    "trashRevokesEmployeeAccess": true,
+    "restoreRestoresEmployeeAccess": true
+  },
+  "files": {
+    "checked": 4,
+    "missing": 0,
+    "changed": 0
+  }
+}

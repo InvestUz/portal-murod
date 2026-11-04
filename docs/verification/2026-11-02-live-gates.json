@@ -1,0 +1,1100 @@
+{
+  "status": "partial",
+  "productionApproved": false,
+  "pipeline": {
+    "realClamAv": true,
+    "freshOfficialSignatures": "28171 / 2026-11-01",
+    "cleanPdfApproved": true,
+    "ocrIndexed": true,
+    "publishedSearchThreeScripts": true,
+    "eicarBlockedBeforeParser": true,
+    "originalBytesVerified": true,
+    "trashAccessRevokedAndRestored": true,
+    "fix": "OCR models installed with mode 0644, readable by worker UID 10001"
+  },
+  "recovery": {
+    "encryptedAuthenticatedStreams": true,
+    "independentPostgresVolume": true,
+    "independentFileVolume": true,
+    "comparedBusinessTables": 9,
+    "comparedPrivateFiles": 1,
+    "digestsEqual": true,
+    "oldSessionRevoked": true,
+    "originalPasswordWorks": true,
+    "originalMfaWorks": true,
+    "limitations": "Synthetic dataset; one document version; Django request client; same physical host; not complete portalctl production installation"
+  },
+  "security": {
+    "image": "ti-production-worker:rc9-candidate",
+    "critical": 1,
+    "high": 81,
+    "strictGate": "FAIL",
+    "criticalCve": "CVE-2026-6653",
+    "vendorSource": "https://security-tracker.debian.org/tracker/CVE-2026-6653",
+    "suppressionAdded": false,
+    "finalApiImageScan": "PASS scan execution / FAIL security gate: 46 High, 0 Critical",
+    "finalScans": {
+      "api": {
+        "counts": {
+          "CRITICAL": 0,
+          "HIGH": 46,
+          "MEDIUM": 67,
+          "LOW": 62,
+          "UNKNOWN": 8
+        },
+        "imageId": "sha256:ec679fba52b157c5f4ea0e5dd68e9044e6626e61f02ca8c7a2816fd987b82b47",
+        "findings": [
+          {
+            "id": "CVE-2026-76642",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-54369",
+            "package": "libacl1",
+            "version": "2.3.2-2+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-54369"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "libncursesw6",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-119373",
+            "package": "libsqlite3-0",
+            "version": "3.46.1-7+deb13u2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-119373"
+          },
+          {
+            "id": "CVE-2026-119586",
+            "package": "libsqlite3-0",
+            "version": "3.46.1-7+deb13u2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-119586"
+          },
+          {
+            "id": "CVE-2026-16742",
+            "package": "libsystemd0",
+            "version": "257.13-1~deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-16742"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "libtinfo6",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2026-16742",
+            "package": "libudev1",
+            "version": "257.13-1~deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-16742"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "ncurses-base",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "ncurses-bin",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2026-9538",
+            "package": "perl-base",
+            "version": "5.40.1-6+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-9538"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          }
+        ]
+      },
+      "worker": {
+        "counts": {
+          "CRITICAL": 1,
+          "HIGH": 81,
+          "MEDIUM": 157,
+          "LOW": 233,
+          "UNKNOWN": 11
+        },
+        "imageId": "sha256:1130b19e84bcf7b8af2d2ec4823e535b0a99910394908be3acddda6989a7f162",
+        "findings": [
+          {
+            "id": "CVE-2026-76642",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "bsdutils",
+            "version": "1:2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-24882",
+            "package": "dirmngr",
+            "version": "2.4.7-21+deb13u1+b5",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-24882"
+          },
+          {
+            "id": "CVE-2026-24882",
+            "package": "gnupg",
+            "version": "2.4.7-21+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-24882"
+          },
+          {
+            "id": "CVE-2026-24882",
+            "package": "gnupg-l10n",
+            "version": "2.4.7-21+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-24882"
+          },
+          {
+            "id": "CVE-2026-24882",
+            "package": "gpg",
+            "version": "2.4.7-21+deb13u1+b5",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-24882"
+          },
+          {
+            "id": "CVE-2026-24882",
+            "package": "gpg-agent",
+            "version": "2.4.7-21+deb13u1+b5",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-24882"
+          },
+          {
+            "id": "CVE-2026-24882",
+            "package": "gpgconf",
+            "version": "2.4.7-21+deb13u1+b5",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-24882"
+          },
+          {
+            "id": "CVE-2026-24882",
+            "package": "gpgsm",
+            "version": "2.4.7-21+deb13u1+b5",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-24882"
+          },
+          {
+            "id": "CVE-2026-54369",
+            "package": "libacl1",
+            "version": "2.3.2-2+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-54369"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libblkid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-12064",
+            "package": "libcurl3t64-gnutls",
+            "version": "8.14.1-2+deb13u7",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-12064"
+          },
+          {
+            "id": "CVE-2026-8458",
+            "package": "libcurl3t64-gnutls",
+            "version": "8.14.1-2+deb13u7",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-8458"
+          },
+          {
+            "id": "CVE-2026-12064",
+            "package": "libcurl4t64",
+            "version": "8.14.1-2+deb13u7",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-12064"
+          },
+          {
+            "id": "CVE-2026-8458",
+            "package": "libcurl4t64",
+            "version": "8.14.1-2+deb13u7",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-8458"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "liblastlog2-2",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libmount1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "libncursesw6",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libsmartcols1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-119373",
+            "package": "libsqlite3-0",
+            "version": "3.46.1-7+deb13u2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-119373"
+          },
+          {
+            "id": "CVE-2026-119586",
+            "package": "libsqlite3-0",
+            "version": "3.46.1-7+deb13u2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-119586"
+          },
+          {
+            "id": "CVE-2026-16742",
+            "package": "libsystemd0",
+            "version": "257.13-1~deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-16742"
+          },
+          {
+            "id": "CVE-2026-73066",
+            "package": "libtesseract5",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-73066"
+          },
+          {
+            "id": "CVE-2026-88047",
+            "package": "libtesseract5",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88047"
+          },
+          {
+            "id": "CVE-2026-88048",
+            "package": "libtesseract5",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88048"
+          },
+          {
+            "id": "CVE-2026-88051",
+            "package": "libtesseract5",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88051"
+          },
+          {
+            "id": "CVE-2026-88052",
+            "package": "libtesseract5",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88052"
+          },
+          {
+            "id": "CVE-2026-88053",
+            "package": "libtesseract5",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88053"
+          },
+          {
+            "id": "CVE-2026-36849",
+            "package": "libtiff6",
+            "version": "4.7.0-3+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-36849"
+          },
+          {
+            "id": "CVE-2026-52490",
+            "package": "libtiff6",
+            "version": "4.7.0-3+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-52490"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "libtinfo6",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2026-16742",
+            "package": "libudev1",
+            "version": "257.13-1~deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-16742"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "libuuid1",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-88806",
+            "package": "libx11-6",
+            "version": "2:1.8.12-1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88806"
+          },
+          {
+            "id": "CVE-2026-88806",
+            "package": "libx11-data",
+            "version": "2:1.8.12-1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88806"
+          },
+          {
+            "id": "CVE-2026-6653",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "CRITICAL",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-6653"
+          },
+          {
+            "id": "CVE-2026-74860",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-74860"
+          },
+          {
+            "id": "CVE-2026-86138",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-86138"
+          },
+          {
+            "id": "CVE-2026-86139",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-86139"
+          },
+          {
+            "id": "CVE-2026-86140",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-86140"
+          },
+          {
+            "id": "CVE-2026-86142",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-86142"
+          },
+          {
+            "id": "CVE-2026-86143",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-86143"
+          },
+          {
+            "id": "CVE-2026-86144",
+            "package": "libxml2",
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-86144"
+          },
+          {
+            "id": "CVE-2026-88807",
+            "package": "libxrender1",
+            "version": "1:0.9.12-1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88807"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "login",
+            "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "mount",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "ncurses-base",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2025-69720",
+            "package": "ncurses-bin",
+            "version": "6.5+20250216-2",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+          },
+          {
+            "id": "CVE-2026-9538",
+            "package": "perl-base",
+            "version": "5.40.1-6+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-9538"
+          },
+          {
+            "id": "CVE-2026-73066",
+            "package": "tesseract-ocr",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-73066"
+          },
+          {
+            "id": "CVE-2026-88047",
+            "package": "tesseract-ocr",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88047"
+          },
+          {
+            "id": "CVE-2026-88048",
+            "package": "tesseract-ocr",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88048"
+          },
+          {
+            "id": "CVE-2026-88051",
+            "package": "tesseract-ocr",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88051"
+          },
+          {
+            "id": "CVE-2026-88052",
+            "package": "tesseract-ocr",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88052"
+          },
+          {
+            "id": "CVE-2026-88053",
+            "package": "tesseract-ocr",
+            "version": "5.5.0-1+b1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-88053"
+          },
+          {
+            "id": "CVE-2026-76642",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+          },
+          {
+            "id": "CVE-2026-78408",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+          },
+          {
+            "id": "CVE-2026-78409",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+          },
+          {
+            "id": "CVE-2026-78410",
+            "package": "util-linux",
+            "version": "2.41.5-0+deb13u1",
+            "severity": "HIGH",
+            "fixedVersionReported": null,
+            "vendorTracker": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+          }
+        ]
+      }
+    }
+  },
+  "browser": {
+    "hrPasswordMfaLogin": "PASS",
+    "editorOpenAndSave": "PASS after lifecycle fix",
+    "publicationDateRoundTrip": "PASS: UI save, reload, read 2026-12-01T12:30; database 2026-12-01T07:30Z; UI clear confirmed as NULL in PostgreSQL",
+    "completeThreeRoleRegression": "NOT RUN"
+  },
+  "currentCodeChecks": {
+    "typescript": "PASS",
+    "eslint": "PASS",
+    "frontendBuild": "PASS",
+    "frontendLogicRegression": "PASS",
+    "diffCheck": "PASS"
+  }
+}

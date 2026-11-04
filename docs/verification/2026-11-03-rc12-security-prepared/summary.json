@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-11-03T12:27:18.647593+00:00",
+  "tool": "Version: 0.76.1",
+  "scope": "prepared",
+  "scopeNote": "Prepared PostgreSQL image and disposable frontend compiler tools; upstream base findings remain separate.",
+  "passed": true,
+  "results": [
+    {
+      "name": "postgres",
+      "reference": "ti-rc16-postgres:0.3.0-rc.12",
+      "imageId": "sha256:d6482f90c1f1538ede698bef81940abadc0aabf6f1c6299eb6b3e59b7f5a7f6e",
+      "counts": {},
+      "fixableHighCritical": [],
+      "highCritical": 0,
+      "nativeComponent": {
+        "helper": "/sbin/su-exec",
+        "packages": [
+          {
+            "name": "postgresql17",
+            "version": "17.11-r0"
+          },
+          {
+            "name": "postgresql17-client",
+            "version": "17.11-r0"
+          },
+          {
+            "name": "postgresql17-contrib",
+            "version": "17.11-r0"
+          },
+          {
+            "name": "su-exec",
+            "version": "0.3-r0"
+          }
+        ],
+        "postgres": "postgres (PostgreSQL) 17.11",
+        "entrypointSha256": "1692706708ac7d9c9f9718c1fa4b23abbcc2feecd1416eb51320cefe75f18a5d",
+        "passed": true
+      }
+    },
+    {
+      "name": "frontend-tools",
+      "reference": "ti-rc16-frontend-tools:0.3.0-rc.12",
+      "imageId": "sha256:789f32a9fcee75273faf27051eb73cb0a23274867c96ced21518b3834c360256",
+      "counts": {
+        "MEDIUM": 3
+      },
+      "fixableHighCritical": [],
+      "highCritical": 0,
+      "nativeComponent": {
+        "lock": {
+          "format": 1,
+          "registry": "https://registry.npmjs.org",
+          "packages": {
+            "npm": {
+              "version": "12.2.1",
+              "url": "https://registry.npmjs.org/npm/-/npm-12.2.1.tgz",
+              "sha512": "6ca0a6151553fc107e60f1186d9c10d57508dcde6de31292a54d4cc4e8e8ef3de25b3281274657442d7115d10df930bb3794ddcb0681cdfd9d317189abf7b63d"
+            },
+            "undici": {
+              "version": "6.29.1",
+              "url": "https://registry.npmjs.org/undici/-/undici-6.29.1.tgz",
+              "sha512": "12f46552dfd0a8012f5dd41e44c6147f0390b1fce90f3b7292b1b6a3018413fac1381a18bfdb85dfd673b0d0e1e254c51e14ebd973998ca91882e783d7666618"
+            }
+          }
+        },
+        "npm": "12.2.1",
+        "undici": "6.29.1",
+        "node": "v24.22.2",
+        "nodeLock": {
+          "format": 1,
+          "version": "24.22.2",
+          "platform": "linux-x64-musl",
+          "url": "https://nodejs.org/dist/v24.22.2/node-v24.22.2-linux-x64-musl.tar.xz",
+          "sha256": "d1601d1defdbb0f02963c89bd979e858aa97f0a3d08a55a1eeb4ddd2b8fa374a",
+          "binarySha256": "9b75d31f8196298cc32d3c75eb27f2834737da5fde0794b9639354f4e02b1909",
+          "release": "https://nodejs.org/en/blog/release/v24.22.2",
+          "checksums": "https://nodejs.org/dist/v24.22.2/SHASUMS256.txt.asc",
+          "note": "Only bin/node and LICENSE are extracted after full archive verification. Bundled npm and yarn are never copied or executed; separate verified compiler tools are used. Not a production backend."
+        },
+        "nodeSha256": "9b75d31f8196298cc32d3c75eb27f2834737da5fde0794b9639354f4e02b1909",
+        "passed": true
+      }
+    }
+  ]
+}

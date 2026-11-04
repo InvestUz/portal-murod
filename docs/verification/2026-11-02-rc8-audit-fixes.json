@@ -1,0 +1,138 @@
+{
+  "dateLocal": "2026-11-02",
+  "release": "0.3.0-rc.8",
+  "status": "partial",
+  "productionApproved": false,
+  "baseCommit": "30cd1e89cd5534301cf2f39fe36476beef48351a",
+  "backendTests": {
+    "passed": 219,
+    "skipped": 0,
+    "database": "PostgreSQL"
+  },
+  "backendChecks": {
+    "date": "2026-11-01T20:24:07.951081+00:00",
+    "checks": [
+      {
+        "command": [
+          "/tmp/venv/bin/python",
+          "-m",
+          "pytest",
+          "backend/tests",
+          "-q",
+          "-p",
+          "no:cacheprovider"
+        ],
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "/tmp/venv/bin/python",
+          "backend/manage.py",
+          "check"
+        ],
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "/tmp/venv/bin/python",
+          "backend/manage.py",
+          "makemigrations",
+          "--check",
+          "--dry-run"
+        ],
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "/tmp/venv/bin/python",
+          "backend/manage.py",
+          "generate_api_types",
+          "--check"
+        ],
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "/tmp/venv/bin/python",
+          "backend/manage.py",
+          "spectacular",
+          "--validate",
+          "--fail-on-warn",
+          "--file",
+          "/evidence/rc8-openapi.yaml"
+        ],
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "/tmp/venv/bin/ruff",
+          "check",
+          "backend",
+          "operations",
+          "scripts",
+          "--select",
+          "F,E9",
+          "--no-cache"
+        ],
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "/tmp/venv/bin/bandit",
+          "-r",
+          "backend",
+          "operations",
+          "-x",
+          "backend/tests,backend/portal/migrations",
+          "-f",
+          "json",
+          "-o",
+          "/evidence/rc8-bandit.json",
+          "-ll"
+        ],
+        "exitCode": 0
+      }
+    ]
+  },
+  "bandit": {
+    "SEVERITY.HIGH": 0,
+    "SEVERITY.LOW": 64,
+    "SEVERITY.MEDIUM": 0,
+    "SEVERITY.UNDEFINED": 0
+  },
+  "frontend": {
+    "typecheck": "PASS",
+    "eslint": "PASS",
+    "build": "PASS",
+    "componentLogicRegression": "PASS",
+    "browserE2E": "NOT RUN - localhost:18445 ERR_CONNECTION_REFUSED"
+  },
+  "security": {
+    "priorImageHighRecords": 46,
+    "uniqueHighCVEs": 10,
+    "fixed": false,
+    "exceptionsAdded": false
+  },
+  "files": [
+    " M .github/workflows/ci.yml",
+    " M CHANGELOG.md",
+    " M FOR_IT_RU.md",
+    " M HANDOVER_RU.md",
+    " M README.md",
+    " M RELEASE",
+    " M apps/web/src/api.generated.ts",
+    " M apps/web/src/api.ts",
+    " M apps/web/src/forms.tsx",
+    " M apps/web/src/i18n.ts",
+    " M apps/web/src/main.tsx",
+    " M apps/web/src/ui.tsx",
+    " M backend/portal/contracts.py",
+    " M backend/portal/services.py",
+    " M docs/IMPLEMENTATION_STATUS.md",
+    " M docs/SECURITY_ACCEPTANCE.md",
+    "?? apps/web/src/form-utils.ts",
+    "?? backend/tests/test_news_schedule.py",
+    "?? docs/AUDIT_FIXES_RC8_RU.md",
+    "?? scripts/test_frontend_audit.mjs"
+  ]
+}

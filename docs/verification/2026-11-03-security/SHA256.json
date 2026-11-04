@@ -1,0 +1,11 @@
+{
+  "base-postgres.json": "57614dc85a76a6e8782a8dae1ecf7729b7a04cadcbf16c3ea319f6c45bfd128e",
+  "base-python.json": "c7994a5979e32b33550da87aee67309de3308b7cebd17a95619eff9dcb0e2578",
+  "base-node.json": "ec2bfe02c24741d8860a19be93d2c1bf00a491fbb9b77c30040fd6acbd5c0d4e",
+  "base-nginx.json": "61cf15e9ba26d6e796f2aee95096eff3bf96516a4afa45709fc1cb403493f502",
+  "base-clamav.json": "e5876fd192ca802e812f5f7f1ec7c82bd317b61efd259091afdf5f6456eab3a3",
+  "prepared-postgres.json": "84212f8c774e3ea7759964c04c311361884e3277a5d43126762b9f5a35a3f134",
+  "prepared-frontend-tools.json": "7059ef66ed877e81532143f7276ca6c870c5cd1ad2c8f8663fed39e20c61b6e7",
+  "runtime-api.json": "2abecb15a359d12b2814bce6fe827f7226c2cd0cd1a4240020d3f59783cbd015",
+  "runtime-worker.json": "dd91eadd3ed37b8251aa261ce0985c8ebf1a1099d1f0be0aa69b62b5250dc091"
+}

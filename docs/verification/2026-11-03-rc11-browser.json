@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-03T10:51:24.155342+00:00",
+  "scope": "Manual browser smoke on actual rc11 Python/PostgreSQL with dedicated loopback HTTP APP_ENV=test API, real production AV worker; production HTTPS certificate checked separately by HTTP client",
+  "employeeOldVersionWarningAndCurrentLink": true,
+  "employeeNoManagementNavigation": true,
+  "hrExistingPasswordAndMfaLogin": true,
+  "hrNewsEditSaveReload": true,
+  "ruUzCounterLabel": true,
+  "adminExistingPasswordAndMfaLogin": true,
+  "adminAccountListAndArchivedDisabled": true,
+  "adminSystemStatusPostgresqlQueueNoErrors": true,
+  "productionApproved": false,
+  "notVerified": [
+    "Browser first password change and new MFA enrollment require user handoff",
+    "All account-creation/credential-reset UI submissions",
+    "Exhaustive keyboard/RU-UZ combinations",
+    "Browser production TLS trust"
+  ],
+  "priorBroaderBrowserEvidence": "COMPREHENSIVE_CHECK_2026-11-03_RU.md (rc10); final source change only news counter label, not a rerun of every rc10 action"
+}

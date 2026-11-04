@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-01T19:44:29.558566+00:00",
+  "release": "0.3.0-rc.6",
+  "status": "partial",
+  "technicalChecksPassed": false,
+  "productionApproved": false,
+  "receivedRelease": "0.3.0-rc.5",
+  "receivedSourceCommit": "ab0d8627c82c120e37b9008274c78846e00ae077",
+  "localBaseBranch": "received-rc5",
+  "branch": "codex/rc5-acceptance",
+  "nativePostgresTests": {
+    "passed": true,
+    "tests": 218,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "frontend": {
+    "typecheck": "PASS",
+    "eslint": "PASS",
+    "productionBuild": "PASS",
+    "dependencies": "npm ci --ignore-scripts --no-fund --no-audit; no package/lock edits"
+  },
+  "packagingTests": {
+    "passed": 5,
+    "runtime": [
+      "Windows Python 3.14.6",
+      "Linux Python 3.12"
+    ],
+    "command": "python -m unittest operations.test_package_release -v"
+  },
+  "databaseRoleProbe": "PASS; see database-roles.json",
+  "databaseRestoreProbe": "PASS within same PostgreSQL instance; see explicit exclusions",
+  "browser": "partial; see browser-partial.json",
+  "openGates": [
+    "Complete installation and separate-volume portalctl restore on compatible dedicated Linux host",
+    "Fresh official ClamAV signatures and full approved-file AV/OCR/download pipeline",
+    "Current strict scans of base and final images, remediation of High/Critical",
+    "Full browser matrix including import/photos/documents and first-login enrollment",
+    "Second physical host recovery and measured RPO/RTO",
+    "HTTP/TLS load, restart/network/disk fault acceptance on target profile",
+    "Independent pentest/retest and company DNS/TLS/VPN/backup/monitoring acceptance"
+  ],
+  "note": "Earlier rc.5 reports remain historical. Separate low-resource native probes do not satisfy the complete 12-GiB installation gate.",
+  "bandit": {
+    "high": 0,
+    "medium": 0,
+    "low": 64,
+    "suppressions": 0
+  },
+  "localReceivedBaseCommit": "d0e9bc86f526f86ee16cf49d4cabbcc0d86b06e9",
+  "scopeReview": {
+    "passed": true,
+    "runtimeBusinessCodeUnchanged": true,
+    "packageLockfilesUnchanged": true,
+    "databaseMigrationsUnchanged": true,
+    "glorixUntouched": true
+  }
+}

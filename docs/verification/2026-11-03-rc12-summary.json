@@ -1,0 +1,47 @@
+{
+  "release": "0.3.0-rc.12",
+  "codeCommit": "9db3733ef46909792deb1ff5f8d0ae04d0aec4c6",
+  "localTechnicalChecksPassed": true,
+  "technicalChecksPassed": false,
+  "productionApproved": false,
+  "ownerReviewIssues": {
+    "reported": 5,
+    "closedOnLocalBackend": 5,
+    "open": 0
+  },
+  "nativePostgresql": {
+    "tests": 299,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "strictSecurityScopes": {
+    "base": "PASS",
+    "prepared": "PASS",
+    "final": "PASS"
+  },
+  "runtimeApiWorkerFindings": 0,
+  "frontendBuilderMediumFindings": 3,
+  "httpsRoleWorkflows": "PASS",
+  "realAvOcrPublication": "PASS",
+  "encryptedIndependentVolumeRestore": "PASS",
+  "englishLocaleAndMigrationRollbackRoundTrip": "PASS",
+  "runtimePythonAndTemplateHashes": "PASS",
+  "runtimeFrontendHashes": "PASS",
+  "supportedLinuxInstall": "ASSIGNED_TO_IT_BY_OWNER",
+  "externalConditions": [
+    "Company DNS/TLS/VPN/ACL and monitoring",
+    "Independent pentest/retest",
+    "Real company OCR corpus",
+    "Recovery on a second physical server and actual RPO/RTO",
+    "Load and failures on target hardware"
+  ],
+  "scopeNote": "Completed local development/verification scope. Full standard Linux acceptance was not run on Windows and is explicitly assigned to IT; technicalChecksPassed for that macro is not asserted.",
+  "realAvXlsxPreviewAndCommit": "PASS",
+  "releasePackagerTests": {
+    "passed": 10,
+    "failures": 0,
+    "errors": 0
+  },
+  "additionalRestoreWithXlsx": "verification/2026-11-04-rc12-recovery-complete.json"
+}

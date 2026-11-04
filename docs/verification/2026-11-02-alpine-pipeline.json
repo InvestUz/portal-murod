@@ -1,0 +1,36 @@
+{
+  "release": "0.3.0-rc.9",
+  "checkedAt": "2026-11-02T15:02:32.894552+00:00",
+  "checks": {
+    "database": true,
+    "frontend": true,
+    "antivirus": true,
+    "storage": true,
+    "worker": true,
+    "processorSandbox": true,
+    "ocrModels": true,
+    "postgresql": true,
+    "migrations": true,
+    "activeAdministrator": true,
+    "leastPrivilege": true,
+    "pipeline": true,
+    "fileIntegrity": true
+  },
+  "scope": "Actual API/worker candidates, Alpine PostgreSQL17, fresh real ClamAV, sandboxed Tesseract5.5.4; service-level publication/search/download authorization; not browser upload or full production portalctl installation.",
+  "pipeline": {
+    "cleanFileApproved": true,
+    "scannedPdfIndexed": true,
+    "testSignatureBlocked": true,
+    "publishedScanSearchableInEachScript": true,
+    "originalFileIntegrity": true,
+    "trashRevokesEmployeeAccess": true,
+    "restoreRestoresEmployeeAccess": true
+  },
+  "files": {
+    "checked": 7,
+    "missing": 0,
+    "changed": 0
+  },
+  "productionApproved": false,
+  "labPrecondition": "Empty manually created restore volume initially had mode0755; corrected to the required0700 before this run. Initial failing storage check retained in private lab log. No acceptance check bypassed."
+}

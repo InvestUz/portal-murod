@@ -1,0 +1,118 @@
+{
+  "databaseVendor": "postgresql",
+  "tests": {
+    "passed": true,
+    "tests": 299,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "benchmark": {
+    "passed": true,
+    "result": {
+      "generatedAt": "2026-11-03T11:46:23.730257+00:00",
+      "scope": "Synthetic service benchmark in a disposable database; never a production load certificate.",
+      "databaseVendor": "postgresql",
+      "excluded": [
+        "HTTP",
+        "TLS",
+        "authentication",
+        "AV",
+        "file bytes",
+        "VPN",
+        "company hardware"
+      ],
+      "dataset": {
+        "employees": 150,
+        "documents": 40,
+        "news": 20,
+        "charactersPerDocument": 528018
+      },
+      "phases": [
+        {
+          "concurrency": 1,
+          "requests": 100,
+          "errors": [],
+          "seconds": 4.407,
+          "operationsPerSecond": 22.69,
+          "results": {
+            "employeeSearch": {
+              "samples": 25,
+              "medianMs": 14.0,
+              "p95Ms": 17.35,
+              "maxMs": 18.48
+            },
+            "documentTitleSearch": {
+              "samples": 25,
+              "medianMs": 11.97,
+              "p95Ms": 14.72,
+              "maxMs": 16.63
+            },
+            "documentContentSearch": {
+              "samples": 25,
+              "medianMs": 77.37,
+              "p95Ms": 93.59,
+              "maxMs": 101.08
+            },
+            "newsPage": {
+              "samples": 25,
+              "medianMs": 12.98,
+              "p95Ms": 15.82,
+              "maxMs": 16.53
+            }
+          }
+        },
+        {
+          "concurrency": 8,
+          "requests": 100,
+          "errors": [],
+          "seconds": 1.107,
+          "operationsPerSecond": 90.34,
+          "results": {
+            "employeeSearch": {
+              "samples": 25,
+              "medianMs": 22.19,
+              "p95Ms": 30.64,
+              "maxMs": 32.92
+            },
+            "documentTitleSearch": {
+              "samples": 25,
+              "medianMs": 20.46,
+              "p95Ms": 38.14,
+              "maxMs": 39.53
+            },
+            "documentContentSearch": {
+              "samples": 25,
+              "medianMs": 99.34,
+              "p95Ms": 132.78,
+              "maxMs": 159.01
+            },
+            "newsPage": {
+              "samples": 25,
+              "medianMs": 27.55,
+              "p95Ms": 40.63,
+              "maxMs": 43.7
+            }
+          }
+        }
+      ],
+      "contentQueryPlan": [
+        {
+          "Plan": {
+            "Node Type": "Seq Scan",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Relation Name": "portal_documentversion",
+            "Alias": "portal_documentversion",
+            "Startup Cost": 0.0,
+            "Total Cost": 10.88,
+            "Plan Rows": 1,
+            "Plan Width": 1090,
+            "Filter": "(normalized_text ~~ '%unique-needle-039%'::text)"
+          }
+        }
+      ]
+    }
+  },
+  "scopeNote": "User review fixes: password-only auth, 12-hour sessions, EN preference and filled RU/UZ/EN templates; native PostgreSQL tests, not final container rebuild."
+}

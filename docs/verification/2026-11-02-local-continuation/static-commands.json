@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-11-01T19:44:38.846652+00:00",
+  "commands": [
+    {
+      "command": [
+        "/tmp/venv/bin/python",
+        "backend/manage.py",
+        "check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "/tmp/venv/bin/python",
+        "backend/manage.py",
+        "makemigrations",
+        "--check",
+        "--dry-run"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "/tmp/venv/bin/python",
+        "backend/manage.py",
+        "generate_api_types",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "/tmp/venv/bin/python",
+        "backend/manage.py",
+        "spectacular",
+        "--validate",
+        "--fail-on-warn",
+        "--file",
+        "/evidence/openapi.yaml"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "/tmp/venv/bin/ruff",
+        "check",
+        "backend",
+        "operations",
+        "scripts",
+        "--select",
+        "F,E9",
+        "--no-cache"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "/tmp/venv/bin/bandit",
+        "-r",
+        "backend",
+        "operations",
+        "-x",
+        "backend/tests,backend/portal/migrations",
+        "-f",
+        "json",
+        "-o",
+        "/evidence/bandit.json",
+        "-ll"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

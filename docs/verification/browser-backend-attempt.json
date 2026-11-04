@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-01T15:38:51.806673+00:00",
+  "method": "Supported managed Sites preview of existing Python dev entrypoint",
+  "attempted": true,
+  "browserE2EVerified": false,
+  "environmentFailure": "Preview Python environment has no Django",
+  "previewStopped": true,
+  "sourceWorkaroundApplied": false
+}

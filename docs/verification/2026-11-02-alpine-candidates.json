@@ -1,0 +1,269 @@
+{
+  "generatedAt": "2026-11-02T15:07:36.699831+00:00",
+  "scope": "Candidate API/worker images built before latest frontend/update-guard/control-socket changes. Rebuild and repeat release checks required. Not production approval.",
+  "scans": [
+    {
+      "image": "api",
+      "id": "sha256:9528f4a6eca4e5135f1449fd02d4fb8ba93ba7ce02a3fac5bf27eb9621eb6be5",
+      "counts": {
+        "MEDIUM": 5,
+        "LOW": 1
+      },
+      "rawReportSha256": "06f9b37f3e57f3ee409d4c42ff25590e2c1de82769dea6a45aa65691dad3e4e2",
+      "findings": [
+        {
+          "VulnerabilityID": "CVE-2025-8869",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "25.3",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-8869"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-13346",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.2.0",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-13346"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-3219",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.1",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-3219"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-6357",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.1",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-6357"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-8643",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.1.2",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-8643"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-1703",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.0",
+          "Severity": "LOW",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-1703"
+        }
+      ]
+    },
+    {
+      "image": "worker",
+      "id": "sha256:c42260a5233eae39a01d61687ade1ca7e72cef761f3d65230f2f4e82ebd410db",
+      "counts": {
+        "MEDIUM": 5,
+        "LOW": 1
+      },
+      "rawReportSha256": "07c3aa6dd86c4804373cf9887f96e56d7983103316f1e48c60f43ec3e8f1077c",
+      "findings": [
+        {
+          "VulnerabilityID": "CVE-2025-8869",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "25.3",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-8869"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-13346",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.2.0",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-13346"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-3219",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.1",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-3219"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-6357",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.1",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-6357"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-8643",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.1.2",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-8643"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-1703",
+          "PkgName": "pip",
+          "InstalledVersion": "25.0.1",
+          "FixedVersion": "26.0",
+          "Severity": "LOW",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-1703"
+        }
+      ]
+    }
+  ],
+  "nativeWorker": {
+    "sourceLock": {
+      "format": 1,
+      "tesseract": {
+        "version": "5.5.4",
+        "commit": "7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+        "url": "https://codeload.github.com/tesseract-ocr/tesseract/tar.gz/7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+        "sha256": "445603ab1d0a63df552e193a600d9d5c4021aff36e144f3091af149e5efb381a",
+        "release": "https://github.com/tesseract-ocr/tesseract/releases/tag/5.5.4",
+        "advisoryExample": "https://github.com/tesseract-ocr/tesseract/security/advisories/GHSA-5j2p-r5vc-q7f3"
+      }
+    },
+    "engine": "tesseract 5.5.4",
+    "binary": "/opt/tesseract/bin/tesseract",
+    "sha256": "0a24b1f36abee050c8bc0be69f792c3556c64808a38709c1953fe06d1ba8fddd",
+    "passed": true
+  },
+  "tests": {
+    "passed": 234,
+    "skipped": 0,
+    "database": "real PostgreSQL17 Alpine3.24 in an isolated test database",
+    "junitSha256": "e96a7e4dbc6683692dac2510d0a65e069bc8240099d75d4ca6e3123ff1ff859e"
+  },
+  "staticChecks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "backend/tests",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "makemigrations",
+        "--check",
+        "--dry-run"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "generate_api_types",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "spectacular",
+        "--validate",
+        "--fail-on-warn",
+        "--file",
+        "/candidate/openapi.yaml"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "ruff",
+        "check",
+        "backend",
+        "operations",
+        "scripts",
+        "--select",
+        "F,E9",
+        "--no-cache"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "baseImages": {
+    "generatedAt": "2026-11-02T14:59:46.736115+00:00",
+    "results": [
+      {
+        "name": "postgres",
+        "reference": "library/postgres:17-alpine3.24@sha256:266d3c257594e195b309ae9d1805e54c788f1d7b375f56bf6c367aac6c917e7b",
+        "exitCode": 0,
+        "counts": {
+          "MEDIUM": 31,
+          "UNKNOWN": 1,
+          "CRITICAL": 1,
+          "HIGH": 25,
+          "LOW": 3
+        },
+        "highCritical": 26
+      },
+      {
+        "name": "python",
+        "reference": "library/python:3.12-alpine3.24@sha256:e6dae589c1c05976188fd3bd019afd091445fc533ed2ea29001beddc7368a9c8",
+        "exitCode": 0,
+        "counts": {
+          "MEDIUM": 5,
+          "LOW": 1
+        },
+        "highCritical": 0
+      },
+      {
+        "name": "node",
+        "reference": "library/node:24-alpine3.24@sha256:8a32c8cf649a49915a66e81e7a609223c708d0adabf288ee3f4077d765542f85",
+        "exitCode": 0,
+        "counts": {
+          "HIGH": 6,
+          "MEDIUM": 12,
+          "LOW": 1
+        },
+        "highCritical": 6
+      },
+      {
+        "name": "nginx",
+        "reference": "library/nginx:stable-alpine-slim@sha256:dede8895648b461178c3bc604f7eed4423efe5220b2c4d839f5eb3d34ac3f8f7",
+        "exitCode": 0,
+        "counts": {},
+        "highCritical": 0
+      },
+      {
+        "name": "clamav",
+        "reference": "clamav/clamav:stable@sha256:bda39705e291105049c3936e2803ac90b955172af8030f94f05dce1252df6c6d",
+        "exitCode": 0,
+        "counts": {},
+        "highCritical": 0
+      }
+    ],
+    "passed": false
+  },
+  "strictGatePassed": false,
+  "productionApproved": false
+}

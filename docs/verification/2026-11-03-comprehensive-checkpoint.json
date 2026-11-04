@@ -1,0 +1,1037 @@
+{
+  "generatedAt": "2026-11-03T04:54:17.245796+00:00",
+  "release": "0.3.0-rc.10",
+  "status": "IN_PROGRESS",
+  "technicalChecksPassed": false,
+  "productionApproved": false,
+  "scope": "Isolated task-owned Docker Desktop Linux/amd64 containers, synthetic accounts/files, real PostgreSQL/ClamAV/Tesseract and HTTPS. No company deployment.",
+  "nativePostgresql": {
+    "databaseVendor": "postgresql",
+    "tests": {
+      "passed": true,
+      "tests": 256,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "benchmark": {
+      "passed": true,
+      "result": {
+        "generatedAt": "2026-11-03T04:35:19.839716+00:00",
+        "scope": "Synthetic service benchmark in a disposable database; never a production load certificate.",
+        "databaseVendor": "postgresql",
+        "excluded": [
+          "HTTP",
+          "TLS",
+          "authentication",
+          "AV",
+          "file bytes",
+          "VPN",
+          "company hardware"
+        ],
+        "dataset": {
+          "employees": 150,
+          "documents": 40,
+          "news": 20,
+          "charactersPerDocument": 528018
+        },
+        "phases": [
+          {
+            "concurrency": 1,
+            "requests": 100,
+            "errors": [],
+            "seconds": 4.132,
+            "operationsPerSecond": 24.2,
+            "results": {
+              "employeeSearch": {
+                "samples": 25,
+                "medianMs": 13.2,
+                "p95Ms": 14.88,
+                "maxMs": 15.0
+              },
+              "documentTitleSearch": {
+                "samples": 25,
+                "medianMs": 11.1,
+                "p95Ms": 13.29,
+                "maxMs": 13.6
+              },
+              "documentContentSearch": {
+                "samples": 25,
+                "medianMs": 74.62,
+                "p95Ms": 80.0,
+                "maxMs": 88.74
+              },
+              "newsPage": {
+                "samples": 25,
+                "medianMs": 12.36,
+                "p95Ms": 13.89,
+                "maxMs": 14.1
+              }
+            }
+          },
+          {
+            "concurrency": 8,
+            "requests": 100,
+            "errors": [],
+            "seconds": 1.014,
+            "operationsPerSecond": 98.57,
+            "results": {
+              "employeeSearch": {
+                "samples": 25,
+                "medianMs": 24.62,
+                "p95Ms": 29.03,
+                "maxMs": 43.69
+              },
+              "documentTitleSearch": {
+                "samples": 25,
+                "medianMs": 19.99,
+                "p95Ms": 34.27,
+                "maxMs": 36.16
+              },
+              "documentContentSearch": {
+                "samples": 25,
+                "medianMs": 95.3,
+                "p95Ms": 124.27,
+                "maxMs": 126.74
+              },
+              "newsPage": {
+                "samples": 25,
+                "medianMs": 22.62,
+                "p95Ms": 29.79,
+                "maxMs": 35.92
+              }
+            }
+          }
+        ],
+        "contentQueryPlan": [
+          {
+            "Plan": {
+              "Node Type": "Seq Scan",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Relation Name": "portal_documentversion",
+              "Alias": "portal_documentversion",
+              "Startup Cost": 0.0,
+              "Total Cost": 10.88,
+              "Plan Rows": 1,
+              "Plan Width": 1090,
+              "Filter": "(normalized_text ~~ '%unique-needle-039%'::text)"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "staticChecks": [
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "check",
+        "--deploy"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "makemigrations",
+        "--check",
+        "--dry-run"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "generate_api_types",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "spectacular",
+        "--validate",
+        "--fail-on-warn",
+        "--file",
+        "/tmp/openapi.yaml"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "ruff",
+        "check",
+        "backend",
+        "operations",
+        "scripts",
+        "--select",
+        "F,E9",
+        "--no-cache"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "packagingUnitTests": {
+    "passed": true,
+    "tests": 10
+  },
+  "frontend": {
+    "typecheck": true,
+    "eslint": true,
+    "componentRegressions": true,
+    "productionBuild": true,
+    "runtimeSourceAndArtifactHashesMatchHostBuild": true
+  },
+  "pipeline": {
+    "release": "0.3.0-rc.10",
+    "checkedAt": "2026-11-03T04:42:12.484985+00:00",
+    "checks": {
+      "database": true,
+      "frontend": true,
+      "antivirus": true,
+      "storage": true,
+      "worker": true,
+      "processorSandbox": true,
+      "ocrModels": true,
+      "postgresql": true,
+      "migrations": true,
+      "activeAdministrator": true,
+      "leastPrivilege": true,
+      "pipeline": true,
+      "fileIntegrity": true
+    },
+    "scope": "Technical acceptance; independent pentest and host/VPN acceptance are separate.",
+    "pipeline": {
+      "cleanFileApproved": true,
+      "scannedPdfIndexed": true,
+      "testSignatureBlocked": true,
+      "publishedScanSearchableInEachScript": true,
+      "originalFileIntegrity": true,
+      "trashRevokesEmployeeAccess": true,
+      "restoreRestoresEmployeeAccess": true
+    },
+    "files": {
+      "checked": 11,
+      "missing": 0,
+      "changed": 0
+    }
+  },
+  "restoration": {
+    "oldSessionRejected": true,
+    "passwordAndMfaPreserved": true,
+    "historicalVersionAndOriginalBytes": true,
+    "passed": true,
+    "generatedAt": "2026-11-03T04:44:45.139111+00:00",
+    "businessInventoryMatched": true,
+    "privateFilesVerified": true,
+    "independentDbAndFileVolumes": true,
+    "httpsCertificateVerified": true,
+    "sourceWritesStoppedThroughout": true,
+    "elapsedSeconds": 36.61,
+    "scope": "Production-mode final images, AES-GCM/HMAC, pg_dump/pg_restore and files, independent containers/volumes on one Docker Desktop host; not second-server recovery or full portalctl installation",
+    "productionApproved": false
+  },
+  "security": {
+    "base": {
+      "generatedAt": "2026-11-03T04:20:40.404939+00:00",
+      "tool": "Version: 0.76.1",
+      "scope": "base",
+      "scopeNote": "Unmodified pinned upstream bases; no findings suppressed.",
+      "passed": false,
+      "results": [
+        {
+          "name": "postgres",
+          "reference": "library/postgres:17-alpine3.24@sha256:266d3c257594e195b309ae9d1805e54c788f1d7b375f56bf6c367aac6c917e7b",
+          "imageId": "sha256:ab20e934b27ba3ff927c1b4c9ff8cf6c32f315f743efe68dd3441182a87fb085",
+          "counts": {
+            "MEDIUM": 31,
+            "UNKNOWN": 1,
+            "CRITICAL": 1,
+            "HIGH": 25,
+            "LOW": 3
+          },
+          "fixableHighCritical": [
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2025-68121",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.24.13, 1.25.7, 1.26.0-rc.3",
+              "severity": "CRITICAL"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2025-61726",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.24.12, 1.25.6",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2025-61729",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.24.11, 1.25.5",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-111943",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.26.10, 1.27.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-25679",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.8, 1.26.1",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-27145",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.11, 1.26.4",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-32280",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.9, 1.26.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-32281",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.9, 1.26.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-32283",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.9, 1.26.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-33811",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.10, 1.26.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-33814",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.10, 1.26.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-33818",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-39820",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.10, 1.26.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-39821",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-39822",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.12, 1.26.5, 1.27.0-rc.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-39836",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.10, 1.26.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-42499",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.10, 1.26.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-42504",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.11, 1.26.4",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-56853",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-56858",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-56859",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-56860",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-56862",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-78667",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.26.9, 1.27.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-78669",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.26.9, 1.27.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "usr/local/bin/gosu",
+              "id": "CVE-2026-97031",
+              "package": "stdlib",
+              "installed": "v1.24.6",
+              "fixed": "1.26.9, 1.27.2",
+              "severity": "HIGH"
+            }
+          ],
+          "highCritical": 26
+        },
+        {
+          "name": "python",
+          "reference": "library/python:3.12-alpine3.24@sha256:e6dae589c1c05976188fd3bd019afd091445fc533ed2ea29001beddc7368a9c8",
+          "imageId": "sha256:38fd5a425aa93b06d367e2e47e2da6a9bc0cabdaf5788fb1707d143fd1416e97",
+          "counts": {
+            "MEDIUM": 5,
+            "LOW": 1
+          },
+          "fixableHighCritical": [],
+          "highCritical": 0
+        },
+        {
+          "name": "node",
+          "reference": "library/node:24-alpine3.24@sha256:8a32c8cf649a49915a66e81e7a609223c708d0adabf288ee3f4077d765542f85",
+          "imageId": "sha256:349727db7d6cce07ed6e0e0c273941fbc22f296a7d4079a52bb5127ac8dbd315",
+          "counts": {
+            "HIGH": 6,
+            "MEDIUM": 12,
+            "LOW": 1
+          },
+          "fixableHighCritical": [
+            {
+              "target": "Node.js",
+              "id": "CVE-2026-102276",
+              "package": "brace-expansion",
+              "installed": "5.0.9",
+              "fixed": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+              "severity": "HIGH"
+            },
+            {
+              "target": "Node.js",
+              "id": "CVE-2026-102278",
+              "package": "brace-expansion",
+              "installed": "5.0.9",
+              "fixed": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+              "severity": "HIGH"
+            },
+            {
+              "target": "Node.js",
+              "id": "CVE-2026-109383",
+              "package": "undici",
+              "installed": "6.28.0",
+              "fixed": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "Node.js",
+              "id": "CVE-2026-109869",
+              "package": "undici",
+              "installed": "6.28.0",
+              "fixed": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "Node.js",
+              "id": "CVE-2026-19534",
+              "package": "undici",
+              "installed": "6.28.0",
+              "fixed": "6.28.1, 7.29.1, 8.10.2",
+              "severity": "HIGH"
+            },
+            {
+              "target": "Node.js",
+              "id": "CVE-2026-87018",
+              "package": "undici",
+              "installed": "6.28.0",
+              "fixed": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH"
+            }
+          ],
+          "highCritical": 6
+        },
+        {
+          "name": "nginx",
+          "reference": "library/nginx:stable-alpine-slim@sha256:dede8895648b461178c3bc604f7eed4423efe5220b2c4d839f5eb3d34ac3f8f7",
+          "imageId": "sha256:bfdf0fe001a54d0f67ce359b7d7b57a0d141328dd94236cd1a4820421f5f811f",
+          "counts": {},
+          "fixableHighCritical": [],
+          "highCritical": 0
+        },
+        {
+          "name": "clamav",
+          "reference": "clamav/clamav:stable@sha256:bda39705e291105049c3936e2803ac90b955172af8030f94f05dce1252df6c6d",
+          "imageId": "sha256:0380fefbeb5b3af92f3d9689c294062624c4bb4aa30614bd13f7d600cec9a7ec",
+          "counts": {},
+          "fixableHighCritical": [],
+          "highCritical": 0
+        }
+      ]
+    },
+    "prepared": [
+      {
+        "name": "postgres",
+        "imageId": "sha256:4437a4dd392adb9a191425f4700580d5527e235a53b2323e497912a568468fda",
+        "counts": {},
+        "inventory": {
+          "helper": "/sbin/su-exec",
+          "package": {
+            "name": "su-exec",
+            "version": "0.3-r0"
+          },
+          "postgres": "postgres (PostgreSQL) 17.11",
+          "entrypointSha256": "1692706708ac7d9c9f9718c1fa4b23abbcc2feecd1416eb51320cefe75f18a5d",
+          "passed": true
+        },
+        "passed": true
+      },
+      {
+        "name": "frontend-tools",
+        "imageId": "sha256:675d9c2e81f0dff1e0f7f9e1092fb387001d54d63eff4a41ec13140d49156a00",
+        "counts": {
+          "MEDIUM": 3
+        },
+        "inventory": {
+          "lock": {
+            "format": 1,
+            "registry": "https://registry.npmjs.org",
+            "packages": {
+              "npm": {
+                "version": "12.2.1",
+                "url": "https://registry.npmjs.org/npm/-/npm-12.2.1.tgz",
+                "sha512": "6ca0a6151553fc107e60f1186d9c10d57508dcde6de31292a54d4cc4e8e8ef3de25b3281274657442d7115d10df930bb3794ddcb0681cdfd9d317189abf7b63d"
+              },
+              "undici": {
+                "version": "6.29.1",
+                "url": "https://registry.npmjs.org/undici/-/undici-6.29.1.tgz",
+                "sha512": "12f46552dfd0a8012f5dd41e44c6147f0390b1fce90f3b7292b1b6a3018413fac1381a18bfdb85dfd673b0d0e1e254c51e14ebd973998ca91882e783d7666618"
+              }
+            }
+          },
+          "npm": "12.2.1",
+          "undici": "6.29.1",
+          "node": "v24.22.2",
+          "passed": true
+        },
+        "passed": true
+      }
+    ],
+    "finalBeforePipUpdate": [
+      {
+        "name": "api",
+        "imageId": "sha256:856efd6cc16014b83c89bf24ba49b57b02a2042b9bc644ce3744e4cfe0623bc8",
+        "counts": {
+          "MEDIUM": 5,
+          "LOW": 1
+        },
+        "passed": true
+      },
+      {
+        "name": "worker",
+        "imageId": "sha256:976230cbb588c70d959bf12cb5d3166fcd5ba9ba5e1d412213d1f4cf34014850",
+        "counts": {
+          "MEDIUM": 5,
+          "LOW": 1
+        },
+        "passed": true
+      }
+    ],
+    "pipUpdate": "Pinned pip 26.3 used during construction; complete pip and ensurepip removed from runtime API/worker after its vendored setuptools caused a new High finding. Final runtime scans contain no findings; verification target bootstraps dev tooling separately.",
+    "rawReports": "2026-11-03-security/SHA256.json",
+    "failedPipUpgradeCandidate": [
+      {
+        "name": "api",
+        "imageId": "sha256:5e2cf3222961da6e628eb4b864e25fe9de22dfb65dd799485ccf41ee9f4d8c46",
+        "counts": {
+          "HIGH": 1,
+          "MEDIUM": 1,
+          "LOW": 1
+        },
+        "passed": false
+      },
+      {
+        "name": "worker",
+        "imageId": "sha256:2bd137ae2e056d75604f122146915f7d3f332ccd71aab055c67395cc092e35b4",
+        "counts": {
+          "HIGH": 1,
+          "MEDIUM": 1,
+          "LOW": 1
+        },
+        "passed": false
+      }
+    ],
+    "runtime": [
+      {
+        "name": "api",
+        "imageId": "sha256:ef9d0a75b4b34e51a1c532e664336cded62fb4056a9eca6b07c8c25dc53518b0",
+        "counts": {},
+        "passed": true
+      },
+      {
+        "name": "worker",
+        "imageId": "sha256:d70a673c4416b2e53329e831dde64b85a4feca0d60d501a7bff6d664fe941b71",
+        "counts": {},
+        "passed": true
+      }
+    ],
+    "nativeWorker": {
+      "sourceLock": {
+        "format": 1,
+        "tesseract": {
+          "version": "5.5.4",
+          "commit": "7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+          "url": "https://codeload.github.com/tesseract-ocr/tesseract/tar.gz/7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+          "sha256": "445603ab1d0a63df552e193a600d9d5c4021aff36e144f3091af149e5efb381a",
+          "release": "https://github.com/tesseract-ocr/tesseract/releases/tag/5.5.4",
+          "advisoryExample": "https://github.com/tesseract-ocr/tesseract/security/advisories/GHSA-5j2p-r5vc-q7f3"
+        }
+      },
+      "engine": "tesseract 5.5.4",
+      "binary": "/opt/tesseract/bin/tesseract",
+      "sha256": "578a18f69b17f821f0812f709a3b177e5f928ecb5b92c761f9d138636864c99f",
+      "passed": true
+    }
+  },
+  "browser": {
+    "backend": "Real Python/Django, PostgreSQL; dedicated loopback HTTP test-mode endpoint, real production-mode AV worker. HTTPS validated independently by certificate-verifying HTTP workflows.",
+    "observedPass": [
+      "HR employee create/keyboard picker/photo AV/save/reopen",
+      "Birthday native date input fix persisted on re-open",
+      "PDF/DOCX upload with real AV, two immutable revisions, old-version warning and exact downloaded bytes",
+      "News publication/editor date roundtrip/clear expiry/soft trash/restore",
+      "HR/employee/admin existing password and MFA login; Russian preference preserved",
+      "Employee colleague privacy: mobile and birth year absent, internal phone visible",
+      "Hidden-mobile search gives no match; name search finds colleague",
+      "Employee navigation excludes HR/admin",
+      "Admin accounts/role selections/archived account disabled/system status",
+      "390px employee search no horizontal overflow; 1440px admin layout",
+      "CSV and XLSX upload through real AV, preview and one-row commit",
+      "Repeated CSV: unresolved namesake prevents commit; explicit skip creates no record; explicit namesake creates a separate record",
+      "Own mobile/floor/room and visibility on/off survive full reload",
+      "Real browser API database-network outage shows generic error and Retry; reconnect and Retry restore normal empty results without page reload",
+      "Legacy NEWS survives COMPANY filter on current backend",
+      "Uzbek dates render 2-noyabr 2026-yil instead of M11",
+      "Filtered news empty state offers clear filters instead of claiming no publications exist"
+    ],
+    "notClaimed": [
+      "Browser first-password and MFA enrolment (HTTP verified; UI credential entry requires user handoff)",
+      "Full browser column-remapping/update-by-number matrix and bulk 150-row visual validation",
+      "All administrator account/credential mutations through browser",
+      "Exhaustive keyboard and RU/UZ matrix",
+      "Company VPN or browser TLS trust"
+    ]
+  },
+  "knownLimitations": [
+    "Strict upstream base security gate FAIL; no CVE suppression or waiver",
+    "Standard Linux host acceptance not run on Windows Docker Desktop; engine has 10.7 GiB RAM vs required 12 GiB",
+    "No independent penetration test or company DNS/TLS/VPN acceptance",
+    "Restore is separate containers/volumes on one host, not second-server RPO/RTO",
+    "Service benchmark excludes HTTP/TLS/VPN/AV and is not 150-concurrent-user acceptance"
+  ],
+  "fixedFailures": [
+    "Offline APK3 inventory parser",
+    "Tesseract compiled default tessdata prefix when environment override absent",
+    "Verified HTTPS-only downloads with certificate verification and redirects refused; Bandit B310 addressed without suppression",
+    "Native birthday input serialization",
+    "Explicit browser locale overwritten by account preference during login/MFA",
+    "Duplicate company news category and legacy NEWS missing from COMPANY filter",
+    "Unnamed decorative news-cover link",
+    "Uzbek CLDR placeholder month names in embedded browser",
+    "Misleading unfiltered-library news empty state after filters"
+  ],
+  "earlierFailedRunsPreserved": true,
+  "httpLoad": {
+    "generatedAt": "2026-11-03T04:27:40.071793+00:00",
+    "passed": true,
+    "tlsCertificateVerified": true,
+    "scope": "Real Nginx TLS, production-mode Python API/PostgreSQL, synthetic read-only requests using one authenticated employee account; 1/8 request workers paced at at most 1 request/second each, below unchanged 10r/s per-IP Nginx policy. Not 150 distinct simultaneous users or target-company capacity acceptance. Includes per-request HTTPS connections.",
+    "phases": [
+      {
+        "concurrency": 1,
+        "requests": 16,
+        "errors": 0,
+        "seconds": 16.028,
+        "p50Ms": 68.22,
+        "p95Ms": 803.6,
+        "p99Ms": 803.6
+      },
+      {
+        "concurrency": 8,
+        "requests": 128,
+        "errors": 0,
+        "seconds": 16.026,
+        "p50Ms": 60.15,
+        "p95Ms": 173.93,
+        "p99Ms": 434.84
+      }
+    ],
+    "productionApproved": false
+  },
+  "antivirusOutage": {
+    "generatedAt": "2026-11-03T04:46:15.564736+00:00",
+    "passed": true,
+    "scope": "Real task-owned ClamAV stop/start, production-mode API/worker/PostgreSQL and certificate-verified Nginx HTTPS; synthetic PDF only",
+    "unavailableCode": "ANTIVIRUS_UNAVAILABLE",
+    "notApprovedDuringOutage": true,
+    "downloadDeniedDuringOutage": true,
+    "explicitRetryAfterRecoveryApproved": true,
+    "downloadedBytesMatched": true,
+    "avRestored": true,
+    "productionApproved": false
+  },
+  "httpWorkflows": {
+    "passed": true,
+    "scope": "Real HTTPS API through Nginx and actual backend/worker/AV; not browser rendering",
+    "createdEmployees": 151,
+    "importedEmployees": 150,
+    "cleanFormats": [
+      "CSV",
+      "PNG-to-JPEG",
+      "PDF",
+      "DOCX"
+    ],
+    "csrfPasswordMfa": true,
+    "rolesAndPrivacy": true,
+    "duplicateAndNamesake": true,
+    "oldAndNewVersionBytes": true,
+    "documentSearchInScripts": true,
+    "newsUniqueViewsAndTrash": true,
+    "archiveSessionRevocation": true
+  },
+  "runtimeChecks": {
+    "pipAndEnsurepipAbsent": true,
+    "djangoDeployCheck": true,
+    "migrationDriftAbsent": true,
+    "openapiValidated": true,
+    "sourceOnlyTypesCheck": "PASS in source-mounted verification target; attempted check in minimal runtime image fails because frontend source is intentionally absent"
+  },
+  "runtimeSourceVerification": {
+    "generatedAt": "2026-11-03T04:52:16.716406+00:00",
+    "passed": true,
+    "scope": "Compare shipped Python source and RELEASE bytes in running final API/worker against current checkout; tests/dev tools are not runtime payload",
+    "images": [
+      {
+        "kind": "api",
+        "files": 62,
+        "imageId": "sha256:ef9d0a75b4b34e51a1c532e664336cded62fb4056a9eca6b07c8c25dc53518b0",
+        "sourceSha256": {
+          "backend/config/settings.py": "9e7bc2ac1b1a80f68224e7a56f1065a79208bbed18396c0d1511efddd40a6b71",
+          "backend/config/urls.py": "198c2eba32b0b093be827fe484a25a155b22352b604d40b1529b9b68a1ee08ff",
+          "backend/config/wsgi.py": "c1ed832c2a0786feb5149ed553edb97a0dec3abf91f510bb5ebedf9214833c53",
+          "backend/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/apps.py": "c04abac7ce3bee52d9167584c6c6c95d34a7a910abe567b3f7ac4943223aa1d8",
+          "backend/portal/auth_views.py": "4e8707919efe91cdaadc0e8d36e3c8d353b33008057c4804ac84cb08537e69f4",
+          "backend/portal/contracts.py": "5c3c92125a5a429da55b5370fdfc75aaa557f75f33e5528c0351eefda0ce6918",
+          "backend/portal/domain.py": "eb21e90a8bdbf6d1ea18e7253afcf34cc19026c8fd6bd0b8860e7368fc6b097c",
+          "backend/portal/errors.py": "0b0881207f32baeed5c334ad32bab89788a318ee363d9e3fcd6d5c39d8448e0f",
+          "backend/portal/file_processing.py": "fa251263e891ac6f6e451fdd19b9f2c4937b4066510adeb52fa197091909b923",
+          "backend/portal/file_views.py": "05caf330cf96b0b32c25b25615ce53683b19394a826b343e6805ad7e27af739b",
+          "backend/portal/imports.py": "eb2f45c6dabf49d58bedd36d32d58021b5025d6ea1982d463ca0b10ada90c7a7",
+          "backend/portal/middleware.py": "a2f3f35374d879d7c2265c3533f7ae665239282ca3810f848af68521b932acb7",
+          "backend/portal/models.py": "a8ea2caa959526b97e9b40d7ab163745fa9feb59a4bf53d02ac1545d124ff292",
+          "backend/portal/ocr.py": "5b2cfb4e213c3b604944f00e56abcac8cb48938abc0ad3f5b9af7d9601f8051c",
+          "backend/portal/operational.py": "b6a50f48ca6580bc4b89d5e775ac088e62c39110a3e40481acf66bcf719afcbe",
+          "backend/portal/permissions.py": "634ca3df6ad58f57272273202600eb2791c6af57a255f060b420070959c3a022",
+          "backend/portal/processor_sandbox.py": "acb88aadb5b2be859c7fd64f274dcf401c3fa855066e1a5de425e4fdf6bd5c2a",
+          "backend/portal/schema.py": "5b2ab390ca43587a8a73b404e95e52b9c3e48b47f83c4e612a18ba5c1f2c4425",
+          "backend/portal/security.py": "204f6340d707f35d1fc73f7c29a3544c7a6fdab3cc1642b9ced7990bd282243f",
+          "backend/portal/serializers.py": "cb30891cdb8623ce6aa95673e9e4b6eb40826b0c1fbd89af9cec92d40d3a59d8",
+          "backend/portal/services.py": "4bdd8f505219a6c23a70c03e15bcc9b5329d85df74c60588739a8d0d47026124",
+          "backend/portal/views.py": "8fc096b27a1a381dcc3315fcb7cffee0f2a548d4189e0c16c5422a851f016f06",
+          "backend/portal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/management/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/migrations/0001_initial.py": "4e33f6acc38505ccf774cc0edbaaf14386c0b665c29196fe1fc71db339f24f7c",
+          "backend/portal/migrations/0002_immutable_versions.py": "af52462aa1209da061fcd926a15cf599d92639defd0a7803292490b5353f5a60",
+          "backend/portal/migrations/0003_workerheartbeat.py": "d016751e5b1dd45b1409e9c67a701b3303b01e698c74be1730b10663307a2e0b",
+          "backend/portal/migrations/0004_fold_document_search.py": "4434972e8e1c263cfaed87b76fc8268c271eb82f4957bf82314b44f193b3d9f4",
+          "backend/portal/migrations/0005_ocr_quality.py": "6f46a1b51ae6bc6710ad2af25910b64e5352e7cec50eba7ec44aeb9597cf737a",
+          "backend/portal/migrations/0006_document_search_indexes.py": "74b5e639cc78e4131973b21939dec5af5ccd92c9c70782e19c405b74e5009791",
+          "backend/portal/migrations/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/management/commands/benchmark_catalog.py": "e5bfb2c6f968ce3da5f346ac645120e3a449c95998ee42304638b5e0e8ec06df",
+          "backend/portal/management/commands/bootstrap_admin.py": "09849a25d41bd7d79bb29480153194eb251ea28a665f25e13a8620bf93c2e364",
+          "backend/portal/management/commands/generate_api_types.py": "921cc621537a3ec52ad8502a0665abac39615f60eb3869b12b75da0bff321146",
+          "backend/portal/management/commands/recovery_inventory.py": "0a5dea7c6464f303ba79994b36bb5cf0441ba0bb8dfc258ec279bd96f054715d",
+          "backend/portal/management/commands/recover_processing.py": "6a7fd7ea8f6a599c229bc62b679a23a958821343603f7f1f5d742a37d3f4a09e",
+          "backend/portal/management/commands/seed_demo.py": "b7b1cb92555fe76d4b9588441b8806461e57bbdef2f5351c7e4a49be962c4f49",
+          "backend/portal/management/commands/verify_deployment.py": "f4f1c9eed0f1f4b9c3bd1163388dcc8d7a109dedea8630de4599d8c188db19c0",
+          "backend/portal/management/commands/verify_private_files.py": "2f940db1aaf0268e4357cb76859675d97b42f07abf4e278425c7d715d7f7bddd",
+          "backend/portal/management/commands/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "operations/acceptance.py": "a42bf958a62981881d0b31a0e0bf40d4eef95a6c755a16fa9e7d1f104e140abc",
+          "operations/backup.py": "1a8cb84ba530862302a9a03799b7b95ab7461e124e1c830f0508c0cbeb5c36a6",
+          "operations/catalog_benchmark.py": "cc06e34453f5b30d2f5a4dd483bfae46e119f1152b08321fd8a1a11fd5c8ab72",
+          "operations/clamav_acceptance.py": "f1bb6e8a92a98604a6ae0aa0deca649f0a652749d01ca409fad5dd55a3d02203",
+          "operations/configuration.py": "8a79eb742c1799bf70d1ec8d540394c03c150f7f532f05ffcbf7a1a099717ab5",
+          "operations/control.py": "e2961de590d1fdf557359a86beb64cf7b46da3472ce2a018b4c1430ee64bafc2",
+          "operations/crypto_stream.py": "03658bf5a988a81e68533b2b98b848a78c95a31d223fe2ccf316106373834031",
+          "operations/health.py": "4169e5cad1f25c37680534f05486bdad34916580c636bad737153eedcbce8133",
+          "operations/http_acceptance.py": "b5e662bdd943e66e03ed24f61f36245d9f81d3dd6dbf4e069158f9190bebdc1a",
+          "operations/http_probe.py": "4eec5307fa6033e42832fa56e92925b58bd98bed46f4efe283f7579a60bbcf7e",
+          "operations/install_trivy.py": "6654c1748c4119ba6f253f19dd54c9c9ec183212462eb59ef8f866111345288a",
+          "operations/native_checks.py": "0ef80147b518b5c86661370f84a73754390bd4b62351f8c5d84e6b0168a24167",
+          "operations/ocr_benchmark.py": "1b95c80e50df66d3431e5447c6897cc73f42afa0d76abe120c6ce5e23f5d452f",
+          "operations/package_release.py": "2250ca464cdee4f1106a40744d4a21ae1f463edd3cefb66e5aa2063a1dd1c06f",
+          "operations/security_scan.py": "b88cf572ef02da8791d9923519eed4e083f427223c8ceac812faf66f84474d62",
+          "operations/service_units.py": "79812f544bb8e668b6145fec74f50d4a166d7d2abb8d87ecfeeb3b3fc05e2d05",
+          "operations/test_package_release.py": "c82573181c50032115ee9832618f7ea0c4df243527c7025d8a2dc57f10783d09",
+          "operations/volume_archive.py": "f9d4bdb1d344a1981c31bc4c4812e456d0a503bcabc29e05109c7eb3196d99ce",
+          "operations/__init__.py": "f2b070cb6398c386c396dbcadbe0f8862591a6cf7dc88c77bdffd78529464fce",
+          "backend/manage.py": "7663755ef3d91973ddef7b44d0934f77d1227fa8d70ae35cb1a2a91a82cc0a15",
+          "RELEASE": "de59822da37573fa30efdbb4025818bbc89364973cad918384c88ebec04cda8d"
+        },
+        "passed": true
+      },
+      {
+        "kind": "worker",
+        "files": 65,
+        "imageId": "sha256:d70a673c4416b2e53329e831dde64b85a4feca0d60d501a7bff6d664fe941b71",
+        "sourceSha256": {
+          "backend/config/settings.py": "9e7bc2ac1b1a80f68224e7a56f1065a79208bbed18396c0d1511efddd40a6b71",
+          "backend/config/urls.py": "198c2eba32b0b093be827fe484a25a155b22352b604d40b1529b9b68a1ee08ff",
+          "backend/config/wsgi.py": "c1ed832c2a0786feb5149ed553edb97a0dec3abf91f510bb5ebedf9214833c53",
+          "backend/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/apps.py": "c04abac7ce3bee52d9167584c6c6c95d34a7a910abe567b3f7ac4943223aa1d8",
+          "backend/portal/auth_views.py": "4e8707919efe91cdaadc0e8d36e3c8d353b33008057c4804ac84cb08537e69f4",
+          "backend/portal/contracts.py": "5c3c92125a5a429da55b5370fdfc75aaa557f75f33e5528c0351eefda0ce6918",
+          "backend/portal/domain.py": "eb21e90a8bdbf6d1ea18e7253afcf34cc19026c8fd6bd0b8860e7368fc6b097c",
+          "backend/portal/errors.py": "0b0881207f32baeed5c334ad32bab89788a318ee363d9e3fcd6d5c39d8448e0f",
+          "backend/portal/file_processing.py": "fa251263e891ac6f6e451fdd19b9f2c4937b4066510adeb52fa197091909b923",
+          "backend/portal/file_views.py": "05caf330cf96b0b32c25b25615ce53683b19394a826b343e6805ad7e27af739b",
+          "backend/portal/imports.py": "eb2f45c6dabf49d58bedd36d32d58021b5025d6ea1982d463ca0b10ada90c7a7",
+          "backend/portal/middleware.py": "a2f3f35374d879d7c2265c3533f7ae665239282ca3810f848af68521b932acb7",
+          "backend/portal/models.py": "a8ea2caa959526b97e9b40d7ab163745fa9feb59a4bf53d02ac1545d124ff292",
+          "backend/portal/ocr.py": "5b2cfb4e213c3b604944f00e56abcac8cb48938abc0ad3f5b9af7d9601f8051c",
+          "backend/portal/operational.py": "b6a50f48ca6580bc4b89d5e775ac088e62c39110a3e40481acf66bcf719afcbe",
+          "backend/portal/permissions.py": "634ca3df6ad58f57272273202600eb2791c6af57a255f060b420070959c3a022",
+          "backend/portal/processor_sandbox.py": "acb88aadb5b2be859c7fd64f274dcf401c3fa855066e1a5de425e4fdf6bd5c2a",
+          "backend/portal/schema.py": "5b2ab390ca43587a8a73b404e95e52b9c3e48b47f83c4e612a18ba5c1f2c4425",
+          "backend/portal/security.py": "204f6340d707f35d1fc73f7c29a3544c7a6fdab3cc1642b9ced7990bd282243f",
+          "backend/portal/serializers.py": "cb30891cdb8623ce6aa95673e9e4b6eb40826b0c1fbd89af9cec92d40d3a59d8",
+          "backend/portal/services.py": "4bdd8f505219a6c23a70c03e15bcc9b5329d85df74c60588739a8d0d47026124",
+          "backend/portal/views.py": "8fc096b27a1a381dcc3315fcb7cffee0f2a548d4189e0c16c5422a851f016f06",
+          "backend/portal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/management/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/migrations/0001_initial.py": "4e33f6acc38505ccf774cc0edbaaf14386c0b665c29196fe1fc71db339f24f7c",
+          "backend/portal/migrations/0002_immutable_versions.py": "af52462aa1209da061fcd926a15cf599d92639defd0a7803292490b5353f5a60",
+          "backend/portal/migrations/0003_workerheartbeat.py": "d016751e5b1dd45b1409e9c67a701b3303b01e698c74be1730b10663307a2e0b",
+          "backend/portal/migrations/0004_fold_document_search.py": "4434972e8e1c263cfaed87b76fc8268c271eb82f4957bf82314b44f193b3d9f4",
+          "backend/portal/migrations/0005_ocr_quality.py": "6f46a1b51ae6bc6710ad2af25910b64e5352e7cec50eba7ec44aeb9597cf737a",
+          "backend/portal/migrations/0006_document_search_indexes.py": "74b5e639cc78e4131973b21939dec5af5ccd92c9c70782e19c405b74e5009791",
+          "backend/portal/migrations/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/portal/management/commands/benchmark_catalog.py": "e5bfb2c6f968ce3da5f346ac645120e3a449c95998ee42304638b5e0e8ec06df",
+          "backend/portal/management/commands/bootstrap_admin.py": "09849a25d41bd7d79bb29480153194eb251ea28a665f25e13a8620bf93c2e364",
+          "backend/portal/management/commands/generate_api_types.py": "921cc621537a3ec52ad8502a0665abac39615f60eb3869b12b75da0bff321146",
+          "backend/portal/management/commands/recovery_inventory.py": "0a5dea7c6464f303ba79994b36bb5cf0441ba0bb8dfc258ec279bd96f054715d",
+          "backend/portal/management/commands/recover_processing.py": "6a7fd7ea8f6a599c229bc62b679a23a958821343603f7f1f5d742a37d3f4a09e",
+          "backend/portal/management/commands/seed_demo.py": "b7b1cb92555fe76d4b9588441b8806461e57bbdef2f5351c7e4a49be962c4f49",
+          "backend/portal/management/commands/verify_deployment.py": "f4f1c9eed0f1f4b9c3bd1163388dcc8d7a109dedea8630de4599d8c188db19c0",
+          "backend/portal/management/commands/verify_private_files.py": "2f940db1aaf0268e4357cb76859675d97b42f07abf4e278425c7d715d7f7bddd",
+          "backend/portal/management/commands/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "operations/acceptance.py": "a42bf958a62981881d0b31a0e0bf40d4eef95a6c755a16fa9e7d1f104e140abc",
+          "operations/backup.py": "1a8cb84ba530862302a9a03799b7b95ab7461e124e1c830f0508c0cbeb5c36a6",
+          "operations/catalog_benchmark.py": "cc06e34453f5b30d2f5a4dd483bfae46e119f1152b08321fd8a1a11fd5c8ab72",
+          "operations/clamav_acceptance.py": "f1bb6e8a92a98604a6ae0aa0deca649f0a652749d01ca409fad5dd55a3d02203",
+          "operations/configuration.py": "8a79eb742c1799bf70d1ec8d540394c03c150f7f532f05ffcbf7a1a099717ab5",
+          "operations/control.py": "e2961de590d1fdf557359a86beb64cf7b46da3472ce2a018b4c1430ee64bafc2",
+          "operations/crypto_stream.py": "03658bf5a988a81e68533b2b98b848a78c95a31d223fe2ccf316106373834031",
+          "operations/health.py": "4169e5cad1f25c37680534f05486bdad34916580c636bad737153eedcbce8133",
+          "operations/http_acceptance.py": "b5e662bdd943e66e03ed24f61f36245d9f81d3dd6dbf4e069158f9190bebdc1a",
+          "operations/http_probe.py": "4eec5307fa6033e42832fa56e92925b58bd98bed46f4efe283f7579a60bbcf7e",
+          "operations/install_trivy.py": "6654c1748c4119ba6f253f19dd54c9c9ec183212462eb59ef8f866111345288a",
+          "operations/native_checks.py": "0ef80147b518b5c86661370f84a73754390bd4b62351f8c5d84e6b0168a24167",
+          "operations/ocr_benchmark.py": "1b95c80e50df66d3431e5447c6897cc73f42afa0d76abe120c6ce5e23f5d452f",
+          "operations/package_release.py": "2250ca464cdee4f1106a40744d4a21ae1f463edd3cefb66e5aa2063a1dd1c06f",
+          "operations/security_scan.py": "b88cf572ef02da8791d9923519eed4e083f427223c8ceac812faf66f84474d62",
+          "operations/service_units.py": "79812f544bb8e668b6145fec74f50d4a166d7d2abb8d87ecfeeb3b3fc05e2d05",
+          "operations/test_package_release.py": "c82573181c50032115ee9832618f7ea0c4df243527c7025d8a2dc57f10783d09",
+          "operations/volume_archive.py": "f9d4bdb1d344a1981c31bc4c4812e456d0a503bcabc29e05109c7eb3196d99ce",
+          "operations/__init__.py": "f2b070cb6398c386c396dbcadbe0f8862591a6cf7dc88c77bdffd78529464fce",
+          "backend/manage.py": "7663755ef3d91973ddef7b44d0934f77d1227fa8d70ae35cb1a2a91a82cc0a15",
+          "RELEASE": "de59822da37573fa30efdbb4025818bbc89364973cad918384c88ebec04cda8d",
+          "backend/worker.py": "233fbe27b7278165683d184b4a0c1ee0df859b36a88d455d1f159b2b7db8e57a",
+          "scripts/setup_ocr.py": "8c55b44b2e60b154a3a4709482650aeb96d7278390356d17ae93c99dd2e9336e",
+          "scripts/verified_https.py": "89fded569182e861a4dcddb258fd87e6a989f9cb90224ee588e64f596e412960"
+        },
+        "passed": true
+      }
+    ]
+  },
+  "readinessAfterAntivirusRecovery": {
+    "release": "0.3.0-rc.10",
+    "checkedAt": "2026-11-03T04:51:45.768878+00:00",
+    "checks": {
+      "database": true,
+      "frontend": true,
+      "antivirus": true,
+      "storage": true,
+      "worker": true,
+      "processorSandbox": true,
+      "ocrModels": true,
+      "postgresql": true,
+      "migrations": true,
+      "activeAdministrator": true,
+      "leastPrivilege": true,
+      "fileIntegrity": true
+    },
+    "scope": "Technical acceptance; independent pentest and host/VPN acceptance are separate.",
+    "files": {
+      "checked": 12,
+      "missing": 0,
+      "changed": 0
+    }
+  },
+  "standardAcceptanceHostCheck": {
+    "format": 1,
+    "checkedAt": "2026-11-03T04:53:30.396965+00:00",
+    "runId": "056df231acb1c52154ff0b9a",
+    "technicalChecksPassed": false,
+    "productionApproved": false,
+    "stages": [
+      {
+        "name": "host",
+        "status": "blocked"
+      }
+    ],
+    "results": {},
+    "externalGates": {
+      "browserE2E": "NOT_VERIFIED",
+      "independentPentest": "NOT_PERFORMED",
+      "companyVpnDnsTls": "NOT_VERIFIED",
+      "secondPhysicalHostRecovery": "NOT_VERIFIED",
+      "faultAndHttpLoad": "NOT_VERIFIED",
+      "realCompanyOcrCorpus": "NOT_ACCEPTED"
+    },
+    "hostBlockers": [
+      "A Linux x86_64 host is required",
+      "openssl is unavailable"
+    ],
+    "notExecuted": [
+      "base-image-scan",
+      "final-image-scan",
+      "https-business-workflows",
+      "independent-volume-restoration",
+      "installation-and-live-av-ocr",
+      "native-postgres-tests-and-benchmark",
+      "prepare-isolated-labs",
+      "prepared-platform-scan"
+    ]
+  },
+  "bandit": {
+    "totals": {
+      "CONFIDENCE.HIGH": 77,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 1,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 78,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 5251,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "mediumHighResults": []
+  },
+  "httpLoadLimitations": [
+    "First run measured about 2 seconds of Windows IPv6 loopback refusal before IPv4 connection; task proxy now binds both loopbacks only",
+    "Unpaced burst exceeded unchanged Nginx 10r/s per-IP limit and returned 429. Paced 1/8-worker run passed; no limiter weakened. This remains insufficient to certify 150 users behind shared NAT."
+  ],
+  "sourceEvidenceSha256": {
+    "native-runtime.log": "a943f352503c33ea842aaf9b6d5af78baf8590001723a419febbbe018198343e",
+    "pipeline-runtime.log": "1153e9048d32e7cd29349ca19d2b4ae70a77e5f305ebea7720dc77c52dc36346",
+    "recovery-runtime.json": "3b14e0ebb873a6c7c24d958dee8d13068b6bb939dc15d625899fa845027de781",
+    "av-outage.json": "7cad0b3572aab14318146eba82e62e65eea94df972a5366c5f606afa157207cb",
+    "api-runtime-scan.json": "2abecb15a359d12b2814bce6fe827f7226c2cd0cd1a4240020d3f59783cbd015",
+    "worker-runtime-scan.json": "dd91eadd3ed37b8251aa261ce0985c8ebf1a1099d1f0be0aa69b62b5250dc091",
+    "http-load.json": "95ec5acd7dad9d4ec148e87efb5784d3b708e2ca82eaa6c390a6c112cdbb8a7d"
+  }
+}

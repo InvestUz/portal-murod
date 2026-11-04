@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-11-01T14:43:14.565519+00:00",
+  "scope": "Start a local ClamAV engine and test real signed databases and INSTREAM.\n\nEngine recognition and the portal freshness gate are reported separately. An\nengine-only success never approves stale signatures or certifies publication.\n",
+  "engineVersion": "ClamAV 1.5.4/28164/Sun Oct 25 11:24:12 2026",
+  "engineOnly": {
+    "clean": "stream: OK",
+    "eicar": "stream: Eicar-Test-Signature FOUND",
+    "passed": true
+  },
+  "productionFreshnessGate": {
+    "passed": false,
+    "error": "ANTIVIRUS_SIGNATURES_STALE"
+  },
+  "fullPublicationPipeline": "NOT_TESTED"
+}

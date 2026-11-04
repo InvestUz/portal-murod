@@ -1,0 +1,15 @@
+{
+  "oldSessionRejected": true,
+  "passwordAndMfaPreserved": true,
+  "historicalVersionAndOriginalBytes": true,
+  "passed": true,
+  "generatedAt": "2026-11-03T10:49:42.134426+00:00",
+  "businessInventoryMatched": true,
+  "privateFilesVerified": true,
+  "independentDbAndFileVolumes": true,
+  "httpsCertificateVerified": true,
+  "sourceWritesStoppedThroughout": true,
+  "elapsedSeconds": 36.67,
+  "scope": "Production-mode final images, AES-GCM/HMAC, pg_dump/pg_restore and files, independent containers/volumes on one Docker Desktop host; not second-server recovery or full portalctl installation",
+  "productionApproved": false
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-01T15:44:33.432641+00:00",
+  "release": "0.3.0-rc.4",
+  "liveHttpBackend": {
+    "passed": true,
+    "roles": [
+      "EMPLOYEE",
+      "HR",
+      "ADMIN"
+    ],
+    "authentication": "password change and real TOTP",
+    "transport": "loopback HTTP; not production TLS/VPN",
+    "avApprovalMocked": false,
+    "approvedFilePipelineTested": false
+  },
+  "restoreHardening": {
+    "realCryptoAndFilesTested": true,
+    "badTagEmitsNoPlaintext": true,
+    "unsafeArchivePreservesOldFiles": true,
+    "commitFailureRollsBack": true,
+    "rollbackFailurePreservesRecoveryData": true,
+    "failureInjectionSimulated": true,
+    "fullPostgresRestoreExecuted": false
+  },
+  "testResult": {
+    "passed": 191,
+    "skipped": 3,
+    "database": "SQLite",
+    "skips": "native PostgreSQL only"
+  }
+}

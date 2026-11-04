@@ -1,0 +1,35 @@
+{
+  "report": {
+    "passed": true,
+    "scope": "Real HTTPS API through Nginx and actual backend/worker/AV; not browser rendering",
+    "createdEmployees": 151,
+    "importedEmployees": 150,
+    "cleanFormats": [
+      "CSV",
+      "PNG-to-JPEG",
+      "PDF",
+      "DOCX"
+    ],
+    "csrfPasswordMfa": true,
+    "rolesAndPrivacy": true,
+    "duplicateAndNamesake": true,
+    "oldAndNewVersionBytes": true,
+    "documentSearchInScripts": true,
+    "newsUniqueViewsAndTrash": true,
+    "archiveSessionRevocation": true
+  },
+  "restorationReferences": {
+    "document": "50773076-9fde-480b-8305-5acb6776e186",
+    "oldVersion": "d7781f2a-d097-4482-a9f1-fc52149dd7dd",
+    "files": [
+      [
+        "88cf3eec-3a1d-4e37-a41d-663ca37dfeec",
+        "72e572587a44718ec3c931956e57faeb9ce1f112e4c3eea512d54bc6835f6ddc"
+      ],
+      [
+        "ca3df709-bc5d-49e4-80f2-a76527a99143",
+        "39bf78dd78be8ff0ddcbab6785c37142cc0f924924c2163b4e0891620ac9d0ae"
+      ]
+    ]
+  }
+}

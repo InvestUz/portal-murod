@@ -1,0 +1,101 @@
+{
+  "scope": "Exploratory Alpine 3.24.3/Python 3.12 environment using existing PostgreSQL 17 test server; not final images",
+  "tests": {
+    "passed": 220,
+    "skipped": 0
+  },
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "backend/tests",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "makemigrations",
+        "--check",
+        "--dry-run"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "generate_api_types",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "spectacular",
+        "--validate",
+        "--fail-on-warn",
+        "--file",
+        "/candidate/openapi.yaml"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "ruff",
+        "check",
+        "backend",
+        "operations",
+        "scripts",
+        "--select",
+        "F,E9",
+        "--no-cache"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "hashProvenance": {
+    "pinsPreserved": true,
+    "originalHashesVerified": 46,
+    "packageCount": 46,
+    "sourceLockSha256": "09ab611706dd20cea70f788221dc88fcb3f8d226f74df8707f53e2ac8ca4d101",
+    "source": "https://pypi.org/pypi/<name>/<version>/json"
+  },
+  "devHashProvenance": {
+    "pinsPreserved": true,
+    "originalHashesVerified": 29,
+    "packageCount": 29,
+    "sourceLockSha256": "dab6f2d49cde1542682b397dc9e188d25cb0ce27e05f1f3c2ea009199685e714",
+    "source": "https://pypi.org/pypi/<name>/<version>/json"
+  },
+  "ocrProbe": {
+    "error": null,
+    "textFound": true,
+    "scope": "Actual raster PDF and bounded sandboxed OCR process; not HTTP acceptance"
+  },
+  "sandbox": "Actual deny of network/parent signals tested; missing libseccomp refuses parsing",
+  "productionApproved": false,
+  "remaining": [
+    "Build final API/worker with reviewed Tesseract 5.5.4",
+    "Review and scan all pinned bases",
+    "Verify PostgreSQL base compatibility by independent-volume dump/restore",
+    "Run HTTPS workflows and recovery with final images",
+    "Complete browser matrix and package release"
+  ]
+}

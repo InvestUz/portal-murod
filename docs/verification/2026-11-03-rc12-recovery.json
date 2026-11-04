@@ -1,0 +1,18 @@
+{
+  "oldSessionRejected": true,
+  "passwordPreserved": true,
+  "passwordAndMfaPreserved": null,
+  "historicalVersionAndOriginalBytes": true,
+  "englishLocalePreserved": true,
+  "localeMigrationBothDirectionsPreservedBusinessHashes": true,
+  "passed": true,
+  "generatedAt": "2026-11-03T12:30:56.518198+00:00",
+  "businessInventoryMatched": true,
+  "privateFilesVerified": true,
+  "independentDbAndFileVolumes": true,
+  "httpsCertificateVerified": true,
+  "sourceWritesStoppedThroughout": true,
+  "elapsedSeconds": 43.49,
+  "scope": "Production-mode final images, AES-GCM/HMAC, pg_dump/pg_restore and files, independent containers/volumes on one Docker Desktop host; not second-server recovery or full portalctl installation",
+  "productionApproved": false
+}

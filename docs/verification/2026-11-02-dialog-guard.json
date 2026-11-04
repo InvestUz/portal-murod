@@ -1,0 +1,16 @@
+{
+  "scope": "Form discard confirmation",
+  "status": "implemented and verified in live HR browser flow",
+  "change": "Replaced blocking window.confirm with an inline alertdialog, continue-editing and discard actions, focus management, and Escape cancellation",
+  "reason": "Live HR form test reached a native confirmation and browser control then timed out; this was a tooling limitation, not proof of data loss",
+  "checks": {
+    "frontendLogicRegression": "PASS, including keep-editing and discard paths",
+    "typescript": "PASS",
+    "eslint": "PASS",
+    "productionBuild": "PASS",
+    "diffCheck": "PASS",
+    "browserRetest": "PASS: warning shown; keep editing preserved name; discard closed form; no native confirm dialog",
+    "focus": "PASS: initial focus on continue-editing; focus returned to cancel after retaining input"
+  },
+  "productionApproved": false
+}

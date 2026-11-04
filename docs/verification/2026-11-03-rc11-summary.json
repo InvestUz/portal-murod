@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-03T10:51:24.155703+00:00",
+  "release": "0.3.0-rc.11",
+  "status": "partial",
+  "technicalChecksPassed": false,
+  "productionApproved": false,
+  "nativePostgresqlTests": {
+    "passed": 283,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "strictSecurityScopes": {
+    "base": "PASS",
+    "prepared": "PASS",
+    "finalPromotedImages": "PASS"
+  },
+  "apiWorkerPostgresHighCritical": 0,
+  "builderMediumFindings": 3,
+  "httpsWorkflows": "PASS",
+  "liveAvOcrPublication": "PASS",
+  "encryptedIndependentVolumeRecovery": "PASS",
+  "sourceAndFrontendRuntimeHashes": "PASS",
+  "configurationAndComposeParser": "PASS",
+  "fullSupportedLinuxInstaller": "NOT_RUN_ASSIGNED_TO_IT_BY_OWNER",
+  "browser": "PARTIAL",
+  "blockers": [],
+  "externalNotAccepted": [
+    "Independent pentest/retest",
+    "Company DNS/TLS/VPN/network rules and alerting",
+    "Real company OCR corpus",
+    "Second physical recovery host and actual RPO/RTO",
+    "Target hardware load/fault/disk exhaustion acceptance"
+  ],
+  "noCveExceptions": true,
+  "handoverScopeUpdatedAt": "2026-11-03T11:00:37.412335+00:00",
+  "manualFirstLoginBrowser": "HANDED_TO_OWNER_FOR_REVIEW",
+  "pendingHumanAcceptance": [
+    "Owner browser review with dedicated local account; outcome not yet reported"
+  ],
+  "responsibilityAssignment": {
+    "linuxInstallAndStandardAcceptance": "IT service, explicit owner decision 2026-11-03",
+    "firstLoginPasswordAndMfaBrowser": "Owner requested dedicated review credentials and link 2026-11-03",
+    "companyDeploymentAndExternalGates": "IT and independent acceptance"
+  }
+}

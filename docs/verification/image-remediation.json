@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-01T15:38:51.806535+00:00",
+  "automaticExceptionsApplied": false,
+  "strictGatePassed": false,
+  "decisions": [
+    {
+      "area": "Python / Node builder",
+      "action": "Updated fixed registry digests to Debian trixie",
+      "criticalFindingsAfter": {
+        "python": 0,
+        "node": 0
+      },
+      "remaining": "High findings remain; final container build/runtime compatibility not verified"
+    },
+    {
+      "area": "PostgreSQL",
+      "action": "Preserved original bookworm family and PostgreSQL major; no blind data-volume OS migration",
+      "remaining": "High/Critical findings remain open"
+    },
+    {
+      "cve": "CVE-2023-45853",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2023-45853",
+      "vendorNote": "Debian bookworm did not build vulnerable contrib/minizip in zlib binary packages",
+      "disposition": "Evidence for review only; no suppression applied"
+    },
+    {
+      "cve": "CVE-2025-7458",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2025-7458",
+      "disposition": "Python trixie base no longer has this finding; PostgreSQL bookworm package finding remains open"
+    },
+    {
+      "area": "gosu Go stdlib",
+      "source": "https://github.com/tianon/gosu/releases/tag/1.19",
+      "disposition": "Go 1.24.6 matches upstream build metadata. Reachability and remediation remain unverified; no suppression applied"
+    }
+  ]
+}

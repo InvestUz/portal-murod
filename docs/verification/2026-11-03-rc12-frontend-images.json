@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "generatedAt": "2026-11-03T12:27:08.743256+00:00",
+  "scope": "All static frontend files and build provenance byte-identical in API and worker versus current host build",
+  "sha256": {
+    "frontend-dist/BUILD-PROVENANCE.json": "2aadace5a9687abe250ddfe137267f8670c2a79dd8775f8551df2bf91969d3d5",
+    "frontend-dist/index.html": "58b77a3d1c576ac2ccca205d83b084da2d795788f605329b02ef4a349a1e13d9",
+    "frontend-dist/assets/index-C2GaQ-zz.js": "d3c923a2baf962650039429a7157493ee4ea577bf88df13e1957b8c099ab198f",
+    "frontend-dist/assets/index-C8qhT286.css": "913f3a5492fa48bdf5863e38182b396b730bf81fab2206d4a034e51788e1f994",
+    "frontend-dist/assets/rich-editor-DE2zro7K.js": "2f2aadd49710bb98103a2e14611ea63850d92d2c6eec7b604928529e3d277f00"
+  }
+}

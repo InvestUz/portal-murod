@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-01T19:35:54.356047+00:00",
+  "passed": true,
+  "actualPgDump": true,
+  "actualPgRestore": true,
+  "encryptedStreamVerified": true,
+  "businessDigestsMatched": true,
+  "seconds": 5.517,
+  "scope": "Separate databases in the SAME disposable PostgreSQL container; original crypto_stream and backup stream functions; synthetic data only",
+  "notVerified": [
+    "independent PostgreSQL volume",
+    "private file volume restoration",
+    "session revocation after restore",
+    "same password and MFA login through HTTPS after restore",
+    "full portalctl backup/restore",
+    "second physical server",
+    "RPO/RTO on company hardware"
+  ]
+}

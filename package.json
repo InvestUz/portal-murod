@@ -1,0 +1,42 @@
+{
+  "name": "toshkent-invest-portal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 scripts/dev.py",
+    "build": "npm run build:web",
+    "build:web": "node scripts/build_frontend.mjs",
+    "typecheck": "tsc --noEmit -p apps/web/tsconfig.json",
+    "lint": "eslint apps/web",
+    "test": "python3 -m pytest backend/tests -q",
+    "setup": "python3 scripts/setup.py",
+    "check:backend": "python3 backend/manage.py check",
+    "migrate": "python3 backend/manage.py migrate",
+    "worker": "python3 backend/worker.py"
+  },
+  "dependencies": {
+    "@tiptap/react": "3.32.2",
+    "@tiptap/starter-kit": "3.32.2",
+    "lucide-react": "1.66.0",
+    "qrcode": "1.5.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "7.18.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "eslint": "10.14.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "8.3.5"
+  },
+  "overrides": {
+    "minimatch": "11.0.1"
+  }
+}

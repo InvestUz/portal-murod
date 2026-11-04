@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "ownerMigrations": true,
+  "appReadWrite": true,
+  "appDDLRejected": true,
+  "appSuperuser": false,
+  "appCreateDB": false,
+  "appCreateRole": false,
+  "scope": "Actual disposable PostgreSQL, initialized with delivered roles script; not complete installation"
+}

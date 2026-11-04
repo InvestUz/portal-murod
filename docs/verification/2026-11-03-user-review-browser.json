@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-03T12:02:56.190155+00:00",
+  "scope": "Manual browser checks on real Python/PostgreSQL with loopback APP_ENV=test API and production AV worker; owner Chrome session untouched",
+  "passwordOnlyFreshEmployeeAndHrLogin": true,
+  "noForcedChangeOrMfaScreens": true,
+  "englishMenuDatesAndHrImportForm": true,
+  "englishAcrossReloadLogoutLogin": true,
+  "englishServerPreferenceVerified": true,
+  "filledTemplateLinkInHrBrowser": true,
+  "downloadedUzTemplateHashMatched": "44dd69cf0e5a9b19b5e6553e95aaab1f9242e78a2a435acfd3306f1c4f7d3a60",
+  "backNavigatesToPreviousPage": true,
+  "topAppearsAfterScroll": true,
+  "topClickReturnsFocusToMain": true,
+  "keyboardTopActivation": true,
+  "mobile390Checked": true,
+  "mobileHeaderPolishPending": false,
+  "productionApproved": false,
+  "mobileHeaderFinal390Verified": true,
+  "ownerReportedIssuesClosed": 5
+}

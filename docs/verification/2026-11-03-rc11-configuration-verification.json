@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "scope": "Actual portable configure with real OpenSSL certificate/key/hostname/expiry verification and official Compose parser; no installation/preflight guard bypass and no service started",
+  "release": "0.3.0-rc.11",
+  "sourceCommit": "5ad09fde7f1caad0ceae940a2f97b5cd815f2c74",
+  "extractedManifestHashesMatched": true,
+  "files": 237,
+  "generatedSecretsDistinct": true,
+  "storageFamilyRecorded": true,
+  "allProfilesParsed": true,
+  "serviceCount": 10,
+  "onlyProxyLoopbackPortPublished": true,
+  "plaintextToolLoggingDisabled": true,
+  "productionApproved": false
+}

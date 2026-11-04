@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "scope": "Real HTTPS API through Nginx and actual backend/worker/AV; not browser rendering",
+  "createdEmployees": 151,
+  "importedEmployees": 150,
+  "cleanFormats": [
+    "CSV",
+    "PNG-to-JPEG",
+    "PDF",
+    "DOCX"
+  ],
+  "csrfPasswordSession": true,
+  "mfaRequired": false,
+  "forcedPasswordChangeRequired": false,
+  "csrfPasswordMfa": null,
+  "rolesAndPrivacy": true,
+  "duplicateAndNamesake": true,
+  "oldAndNewVersionBytes": true,
+  "documentSearchInScripts": true,
+  "newsUniqueViewsAndTrash": true,
+  "archiveSessionRevocation": true
+}

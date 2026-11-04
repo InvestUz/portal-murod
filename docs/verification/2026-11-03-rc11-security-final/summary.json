@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-11-03T09:29:34.884931+00:00",
+  "tool": "Version: 0.76.1",
+  "scope": "final",
+  "scopeNote": "Built Python application and OCR worker images.",
+  "passed": true,
+  "results": [
+    {
+      "name": "api",
+      "reference": "ti-rc13-api:0.3.0-rc.11",
+      "imageId": "sha256:4f8e4cbb1b0c204afb72939a186b211c13bc039e025bcad57bbc9ae839229e7c",
+      "counts": {},
+      "fixableHighCritical": [],
+      "highCritical": 0
+    },
+    {
+      "name": "worker",
+      "reference": "ti-rc13-worker:0.3.0-rc.11",
+      "imageId": "sha256:4b13357a772c90f6ed6fd4bc9c9b9d78d3a981cd27fa3924d44a52acc10db262",
+      "counts": {},
+      "fixableHighCritical": [],
+      "highCritical": 0,
+      "nativeComponent": {
+        "sourceLock": {
+          "format": 1,
+          "tesseract": {
+            "version": "5.5.4",
+            "commit": "7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+            "url": "https://codeload.github.com/tesseract-ocr/tesseract/tar.gz/7e548e6eff172f38f97664afe7f7ce40db36c8d6",
+            "sha256": "445603ab1d0a63df552e193a600d9d5c4021aff36e144f3091af149e5efb381a",
+            "release": "https://github.com/tesseract-ocr/tesseract/releases/tag/5.5.4",
+            "advisoryExample": "https://github.com/tesseract-ocr/tesseract/security/advisories/GHSA-5j2p-r5vc-q7f3"
+          }
+        },
+        "engine": "tesseract 5.5.4",
+        "binary": "/opt/tesseract/bin/tesseract",
+        "sha256": "578a18f69b17f821f0812f709a3b177e5f928ecb5b92c761f9d138636864c99f",
+        "passed": true
+      }
+    }
+  ]
+}

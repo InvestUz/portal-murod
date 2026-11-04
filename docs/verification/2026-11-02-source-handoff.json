@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-01T19:58:38.574645+00:00",
+  "release": "0.3.0-rc.7",
+  "status": "partial",
+  "productionApproved": false,
+  "scope": "Application source and IT handover documents; server deployment/configuration excluded by user instruction",
+  "freshVerification": {
+    "pythonAST": {
+      "passed": true,
+      "filesByDirectory": {
+        "backend": 60,
+        "operations": 19,
+        "scripts": 3
+      }
+    },
+    "workerEntrypointSourceDeclaration": {
+      "passed": true,
+      "note": "Static COPY/CMD/source existence check; not an image runtime test"
+    },
+    "packagingRegressionTests": {
+      "passed": true,
+      "tests": 5,
+      "runtime": "Host Windows Python; real isolated Git/ZIP tests"
+    }
+  },
+  "previousEvidence": {
+    "release": "0.3.0-rc.6",
+    "postgresTests": 218,
+    "skipped": 0,
+    "note": "Previous dated run, not a new rc.7 execution; application Python/TypeScript business code unchanged"
+  },
+  "fixedProblem": "Worker entrypoint source was absent from worker image COPY instructions; now explicitly included",
+  "notRun": [
+    "Rebuild/run after worker packaging fix",
+    "Fresh full pytest/frontend verification for rc.7",
+    "Complete installation/AV/OCR/independent-volume restore",
+    "Full browser/load/fault/security/company acceptance"
+  ],
+  "serverConfigurationChanged": false,
+  "runtimeApplicationBusinessCodeChanged": false,
+  "packageLockfilesChanged": false,
+  "remoteFilesUploaded": [],
+  "prCreated": false
+}

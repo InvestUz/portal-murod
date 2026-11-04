@@ -1,0 +1,8 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
+export default defineConfig({
+  root: path.resolve(process.cwd(),'apps/web'),
+  plugins: [react()],
+  build: { outDir: path.resolve(process.cwd(),'frontend-dist'), emptyOutDir:true, sourcemap:false },
+});

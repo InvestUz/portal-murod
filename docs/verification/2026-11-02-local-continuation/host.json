@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-01T19:34:34.906104+00:00",
+  "hostOs": "Windows",
+  "hostArchitecture": "AMD64",
+  "hostPython": "3.14.6",
+  "docker": {
+    "OSType": "linux",
+    "Architecture": "x86_64",
+    "NCPU": 6,
+    "MemTotal": 11486220288
+  },
+  "compose": "5.3.1",
+  "otherRunningContainers": 20,
+  "fullAcceptanceEligible": false,
+  "blockers": [
+    "Windows host; no general-purpose Linux distribution/VM found",
+    "Docker VM RAM is below required 12 GiB; active Glorix workloads must remain unchanged",
+    "Host OpenSSL absent from PATH"
+  ],
+  "verificationProfile": "Separate Python 3.12 Linux container limited to 1 GiB/1 CPU; isolated PostgreSQL 17 limited to 256 MiB/1 CPU; no published ports; not the production profile"
+}

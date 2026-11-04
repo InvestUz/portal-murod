@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "command": [
+        "ruff",
+        "check",
+        "backend",
+        "operations",
+        "scripts",
+        "--select",
+        "F,E9"
+      ],
+      "exitCode": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "check",
+        "--deploy"
+      ],
+      "exitCode": 0,
+      "stdout": "System check identified no issues (1 silenced).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "makemigrations",
+        "--check",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "stdout": "No changes detected\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "spectacular",
+        "--validate",
+        "--fail-on-warn",
+        "--file",
+        "/tmp/portal-rc12-openapi.yaml"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "backend/manage.py",
+        "generate_api_types",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "Public API response types verified\n",
+      "stderr": ""
+    }
+  ],
+  "bandit": {
+    "SEVERITY.HIGH": 0,
+    "SEVERITY.LOW": 79,
+    "SEVERITY.MEDIUM": 0,
+    "SEVERITY.UNDEFINED": 0
+  },
+  "banditFindingsAtMediumOrHigher": []
+}

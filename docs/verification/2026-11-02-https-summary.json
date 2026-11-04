@@ -1,0 +1,33 @@
+{
+  "httpsWorkflows": "PASS",
+  "restoredHttpsSessionAndFiles": "PASS",
+  "recoveryInventoryCounts": {
+    "Document": 2,
+    "DocumentVersion": 3,
+    "Employee": 157,
+    "EmployeeNumber": 157,
+    "FileObject": 7,
+    "ImportJob": 3,
+    "News": 3,
+    "NewsRevision": 5,
+    "NewsView": 3,
+    "Office": 3,
+    "OrgUnit": 2,
+    "TOTPDevice": 8,
+    "User": 8,
+    "UserAccount": 8
+  },
+  "operationsRestoreTests": {
+    "passed": 67,
+    "skipped": 0
+  },
+  "composeParser": "PASS including tools and verification profiles",
+  "fix": "PostgreSQL readiness probe now uses TCP 127.0.0.1 to avoid temporary initialization server",
+  "productionApproved": false,
+  "limitations": [
+    "Same physical host",
+    "Custom isolated test orchestration, not complete portalctl installation",
+    "APP_ENV=test with Secure cookies and real TLS; production edge gateway configuration not certified",
+    "Security gate still fails; final browser acceptance incomplete"
+  ]
+}

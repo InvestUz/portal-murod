@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-11-03T09:27:40.209561+00:00",
+  "tool": "Version: 0.76.1",
+  "scope": "base",
+  "scopeNote": "Unmodified pinned upstream bases; no findings suppressed.",
+  "passed": true,
+  "results": [
+    {
+      "name": "postgres",
+      "reference": "library/alpine:3.24@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a",
+      "imageId": "sha256:b92841763c5c2140a20eeb2a44e94ebb0e80fd51d9d6b5895ea72fa999525d68",
+      "counts": {},
+      "fixableHighCritical": [],
+      "highCritical": 0
+    },
+    {
+      "name": "python",
+      "reference": "library/python:3.12-alpine3.24@sha256:e6dae589c1c05976188fd3bd019afd091445fc533ed2ea29001beddc7368a9c8",
+      "imageId": "sha256:38fd5a425aa93b06d367e2e47e2da6a9bc0cabdaf5788fb1707d143fd1416e97",
+      "counts": {
+        "MEDIUM": 5,
+        "LOW": 1
+      },
+      "fixableHighCritical": [],
+      "highCritical": 0
+    },
+    {
+      "name": "node",
+      "reference": "library/alpine:3.24@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a",
+      "imageId": "sha256:b92841763c5c2140a20eeb2a44e94ebb0e80fd51d9d6b5895ea72fa999525d68",
+      "counts": {},
+      "fixableHighCritical": [],
+      "highCritical": 0
+    },
+    {
+      "name": "nginx",
+      "reference": "library/nginx:stable-alpine-slim@sha256:dede8895648b461178c3bc604f7eed4423efe5220b2c4d839f5eb3d34ac3f8f7",
+      "imageId": "sha256:bfdf0fe001a54d0f67ce359b7d7b57a0d141328dd94236cd1a4820421f5f811f",
+      "counts": {},
+      "fixableHighCritical": [],
+      "highCritical": 0
+    },
+    {
+      "name": "clamav",
+      "reference": "clamav/clamav:stable@sha256:bda39705e291105049c3936e2803ac90b955172af8030f94f05dce1252df6c6d",
+      "imageId": "sha256:0380fefbeb5b3af92f3d9689c294062624c4bb4aa30614bd13f7d600cec9a7ec",
+      "counts": {},
+      "fixableHighCritical": [],
+      "highCritical": 0
+    }
+  ]
+}

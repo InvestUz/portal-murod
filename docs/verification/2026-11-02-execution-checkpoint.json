@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-11-02T15:10:28.485160+00:00",
+  "status": "partial",
+  "reason": "Docker Desktop Linux Engine named pipe disappeared and Docker Desktop/backend processes were not found. Cause unknown. No engine restart or system change performed.",
+  "passed": {
+    "backendTests": 234,
+    "skipped": 0,
+    "postgres": "17 Alpine3.24",
+    "ruff": true,
+    "frontend": [
+      "typecheck",
+      "eslint",
+      "production build",
+      "component regression harness"
+    ],
+    "livePipeline": [
+      "fresh real ClamAV",
+      "sandboxed Tesseract5.5.4 raster PDF",
+      "publication and three-script search",
+      "EICAR blocked before parser",
+      "original bytes and trash/restore permissions"
+    ],
+    "restore": [
+      "authenticated encrypted snapshot",
+      "new independent Alpine PG/files volumes",
+      "14 stable business inventories equal",
+      "REINDEX",
+      "restricted app role",
+      "verified HTTPS",
+      "old session rejected",
+      "password and MFA preserved",
+      "both original document versions"
+    ],
+    "browser": [
+      "employee login/MFA",
+      "hidden mobile search gives zero",
+      "colleague birthday excludes year",
+      "old revision warning and current link",
+      "own room edit persists",
+      "mobile390px no horizontal overflow",
+      "mobile menu Escape closes and returns focus"
+    ]
+  },
+  "notCompleted": [
+    "Final image rebuild after latest source/frontend/CLI changes",
+    "PostgreSQL gosu and Node/npm High/Critical remediation",
+    "Latest Bandit run was interrupted and report incomplete",
+    "HR expanded-picker browser verification was interrupted when backend disappeared",
+    "Complete browser acceptance matrix and full Linux portalctl installation",
+    "Final release packaging"
+  ],
+  "strictGatePassed": false,
+  "productionApproved": false,
+  "filesUploadedRemotely": false,
+  "prCreated": false
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Actual browser -> Nginx HTTP loopback -> Django/PostgreSQL -> ClamAV/worker; synthetic CSV",
+  "passwordMfaLogin": "PASS HR",
+  "keyboardPicker": "PASS ArrowDown and Enter selected unit; aria-activedescendant linked to option",
+  "pickerLabelStability": "Review pending: label locator stopped matching while options expanded",
+  "replacement": {
+    "fileAApprovedAndPreviewed": true,
+    "selectingBRemovedPreviewAndCommit": true,
+    "fileBApprovedAndPreviewed": true,
+    "commitResult": {
+      "created": 1,
+      "updated": 0,
+      "skipped": 0
+    },
+    "databaseOnlyContainsB": true,
+    "databaseContainsA": false
+  },
+  "limits": [
+    "CSV only in this browser flow; XLSX/photo/document-version UI still pending",
+    "HTTP loopback; company TLS/VPN not tested",
+    "Screenshot capture surface cropped to visible panel; DOM viewport measured 1280 and no document horizontal overflow"
+  ],
+  "productionApproved": false
+}
