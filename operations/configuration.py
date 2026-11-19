@@ -116,7 +116,7 @@ def configure(root,origin,bind,networks,cert,key,validate_tls=True,backup_direct
         raise ConfigurationError('Image lock must contain all five immutable references')
     installation_id=secrets.token_hex(16)
     family=validate_postgres_lock(images)
-    values={'PORTAL_INSTALLATION_ID':installation_id,'PORTAL_IMAGE_PREFIX':project_name,'PORTAL_RELEASE':(root/'RELEASE').read_text().strip(),'COMPOSE_PROJECT_NAME':project_name,'APP_ENV':'production','APP_ORIGIN':origin,'ALLOWED_HOSTS':hostname,'BIND_ADDRESS':bind,'TLS_PORT':str(port),'STORAGE_DRIVER':'filesystem','REQUIRE_MFA':'none','REQUIRE_PASSWORD_CHANGE':'false','SESSION_TTL_SECONDS':'43200','SESSION_IDLE_SECONDS':'43200','PRIVATE_STORAGE_DIR':'/var/lib/portal/files','BACKUP_RETENTION_DAYS':'14'}
+    values={'PORTAL_INSTALLATION_ID':installation_id,'PORTAL_IMAGE_PREFIX':project_name,'PORTAL_RELEASE':(root/'RELEASE').read_text().strip(),'COMPOSE_PROJECT_NAME':project_name,'APP_ENV':'production','APP_ORIGIN':origin,'ALLOWED_HOSTS':hostname+',app','BIND_ADDRESS':bind,'TLS_PORT':str(port),'STORAGE_DRIVER':'filesystem','REQUIRE_MFA':'none','REQUIRE_PASSWORD_CHANGE':'false','SESSION_TTL_SECONDS':'43200','SESSION_IDLE_SECONDS':'43200','PRIVATE_STORAGE_DIR':'/var/lib/portal/files','BACKUP_RETENTION_DAYS':'14'}
     for name in ['DJANGO_SECRET_KEY','WORKER_TOKEN','EDGE_PROXY_TOKEN','POSTGRES_PASSWORD','POSTGRES_OWNER_PASSWORD','POSTGRES_ADMIN_PASSWORD']:
         values[name]=secrets.token_urlsafe(48)
     values.update({name.upper()+'_IMAGE':image for name,image in images['images'].items()})
