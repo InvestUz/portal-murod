@@ -8,9 +8,9 @@ MARKER='# Managed by Toshkent Invest portalctl\n'
 def render_units(root):
     root=str(Path(root).resolve())
     if any(ord(character)<32 for character in root):raise ConfigurationError('Unsupported control character in release path')
-    quoted='"'+root.replace('\\','\\\\').replace('"','\\"')+'"'
     executable='"'+(root+'/portalctl').replace('\\','\\\\').replace('"','\\"')+'"'
-    base='[Unit]\nRequires=docker.service\nAfter=docker.service network-online.target\n\n[Service]\nType=oneshot\nWorkingDirectory='+quoted+'\nEnvironment=DOCKER_HOST=unix:///var/run/docker.sock\nUMask=0077\n'
+    # systemd takes WorkingDirectory= literally; quotes make it a non-absolute path and the unit fails to load.
+    base='[Unit]\nRequires=docker.service\nAfter=docker.service network-online.target\n\n[Service]\nType=oneshot\nWorkingDirectory='+root+'\nEnvironment=DOCKER_HOST=unix:///var/run/docker.sock\nUMask=0077\n'
     return {
         'toshkent-portal-backup.service':MARKER+base+'TimeoutStartSec=7200\nExecStart=/usr/bin/python3 '+executable+' backup\n',
         'toshkent-portal-backup.timer':MARKER+'[Unit]\nDescription=Encrypted portal backup\n\n[Timer]\nOnCalendar=daily\nRandomizedDelaySec=300\nPersistent=true\n\n[Install]\nWantedBy=timers.target\n',
